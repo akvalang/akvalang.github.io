@@ -22,7 +22,7 @@
             <span class="title">Items</span>
             <input type="text" class="add-item-name" placeholder="Type name here ..." ng-model="newName" ng-click="onClickInputField($event)">
             <button class="add-item" ng-click="addItemField()" type="submit">Add new</button>
-            <div class="item" ng-repeat="item in items" ng-click="select($index)" ng-class="{selected: $index == selected}">
+            <div class="item" ng-repeat="item in items track by $index" ng-click="select($index)" ng-class="{selected: $index == selected}">
                 <span class="item-name">{{item.name}}</span>
                 <span class="item-num">{{item.comments.length}}</span>
                 <button class="delete-item" type="reset" ng-click="removeItem($index)">Delete</button>
