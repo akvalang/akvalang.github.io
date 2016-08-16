@@ -1,0 +1,366 @@
+/* empeek */
+
+@font-face {
+    font-family: 'OpenSansRegular';
+    src: url('fonts/opensans_regular/OpenSans-Regular-webfont.eot');
+    src: url('fonts/opensans_regular/OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+    url('fonts/opensans_regular/OpenSans-Regular-webfont.woff') format('woff'),
+    url('fonts/opensans_regular/OpenSans-Regular-webfont.ttf') format('truetype'),
+    url('fonts/opensans_regular/OpenSans-Regular-webfont.svg#open_sansregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'OpenSansLight';
+    src: url('fonts/opensans_light/OpenSans-Light-webfont.eot');
+    src: url('fonts/opensans_light/OpenSans-Light-webfont.eot?#iefix') format('embedded-opentype'),
+    url('fonts/opensans_light/OpenSans-Light-webfont.woff') format('woff'),
+    url('fonts/opensans_light/OpenSans-Light-webfont.ttf') format('truetype'),
+    url('fonts/opensans_light/OpenSans-Light-webfont.svg#open_sanslight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'OpenSansSemibold';
+    src: url('fonts/opensans_semibol/OpenSans-Semibold-webfont.eot');
+    src: url('fonts/opensans_semibol/OpenSans-Semibold-webfont.eot?#iefix') format('embedded-opentype'),
+    url('fonts/opensans_semibol/OpenSans-Semibold-webfont.woff') format('woff'),
+    url('fonts/opensans_semibol/OpenSans-Semibold-webfont.ttf') format('truetype'),
+    url('fonts/opensans_semibol/OpenSans-Semibold-webfont.svg#open_sanssemibold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'OpenSansBold';
+    src: url('fonts/opensans_bold/OpenSans-Bold-webfont.eot');
+    src: url('fonts/opensans_bold/OpenSans-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+    url('fonts/opensans_bold/OpenSans-Bold-webfont.woff') format('woff'),
+    url('fonts/opensans_bold/OpenSans-Bold-webfont.ttf') format('truetype'),
+    url('fonts/opensans_bold/OpenSans-Bold-webfont.svg#open_sansbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+html{
+    overflow-x: hidden;
+}
+
+html, body {
+    height: 100%;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    float: left;
+    font-family: 'OpenSansRegular', Helvetica, sans-serif;
+    background: #F9F9F9;
+}
+
+.main-wrapper {
+    float: left;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-block {
+    display: block;
+    max-width: 271px;
+    height: 100%;
+    background: #2B2F3E;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.nav-block h1 {
+    float: left;
+    font-family: 'OpenSansLight', Helvetica, sans-serif;
+    color: #565A69;
+    font-size: 36px;
+    padding: 25px;
+    margin: 0 0 75px;
+}
+
+.nav, .nav ul {
+    float: left;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.nav ul li {
+    display: block;
+    list-style: none;
+    font-size: 18px;
+    color: #fff;
+    padding: 20px 0 20px 25px;
+}
+
+.nav ul li.active {
+    background: rgba(255, 45, 91, 1);
+    background: -moz-linear-gradient(top, rgba(255, 45, 91, 1) 0%, rgba(255, 64, 74, 1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255, 45, 91, 1)), color-stop(100%, rgba(255, 64, 74, 1)));
+    background: -webkit-linear-gradient(top, rgba(255, 45, 91, 1) 0%, rgba(255, 64, 74, 1) 100%);
+    background: -o-linear-gradient(top, rgba(255, 45, 91, 1) 0%, rgba(255, 64, 74, 1) 100%);
+    background: -ms-linear-gradient(top, rgba(255, 45, 91, 1) 0%, rgba(255, 64, 74, 1) 100%);
+    background: linear-gradient(to bottom, rgba(255, 45, 91, 1) 0%, rgba(255, 64, 74, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff2d5b', endColorstr='#ff404a', GradientType=0);
+
+}
+
+.content-block {
+    position: relative;
+    left: 274px;
+    padding: 27px;
+    margin: 0;
+}
+
+.content-wrapper {
+    position: relative;
+    float: left;
+    min-height: 520px;
+    background: #fff;
+    border: 1px solid #F2F2F2;
+    -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
+}
+
+.cw-left {
+    max-width: 433px;
+    margin-right: 20px;
+    padding: 20px 15px 15px 30px;
+}
+
+.cw-right {
+    max-width: 403px;
+    padding: 20px 18px 15px 20px;
+}
+
+.content-wrapper .title {
+    float: left;
+    width: 100%;
+    font-family: 'OpenSansLight', Helvetica, sans-serif;
+    font-size: 36px;
+    color: #565A69;
+    padding-bottom: 25px;
+}
+
+input[type="text"].add-item-name {
+    float: left;
+    width: 268px;
+    height: 15px;
+    background: #ffffff !important;
+    border: 1px solid #cccccc;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -khtml-border-radius: 3px;
+    border-radius: 3px;
+    font-size: 16px;
+    color: #B3B3B3;
+    padding: 10px;
+    outline: none;
+    margin: 0 10px 0 0;
+}
+
+button.add-item {
+    float: left;
+    width: 130px;
+    height: 37px;
+    background: #27CCC0;
+    border: none;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -khtml-border-radius: 3px;
+    color: #fff;
+    font-family: 'OpenSansSemibold', Helvetica, sans-serif;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+    padding: 10px 0;
+    line-height: 1em;
+    margin: 0 0 10px;
+}
+
+.item {
+    position: relative;
+    display: block;
+    width: 100%;
+    float: left;
+    padding: 10px 0;
+    border-bottom: 1px solid #F2F2F2;
+}
+
+.item-name {
+    float: left;
+    color: #000;
+    font-family: 'OpenSansSemibold', Helvetica, sans-serif;
+    font-size: 16px;
+    text-align: left;
+    padding: 5px 0;
+    cursor: pointer;
+}
+
+.item-num {
+    position: relative;
+    top: 7px;
+    float: left;
+    display: block;
+    background: #27CCC0;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -khtml-border-radius: 10px;
+    color: #fff;
+    font-family: 'OpenSansBold', Helvetica, sans-serif;
+    font-size: 13px;
+    padding: 1px 9px;
+    margin: 0 10px;
+}
+
+button.delete-item {
+    float: right;
+    width: 97px;
+    height: 34px;
+    background: #ffffff;
+    border: 1px solid #FF305A;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -khtml-border-radius: 3px;
+    color: #FF305A;
+    font-family: 'OpenSansLight', Helvetica, sans-serif;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+    padding: 10px 0;
+    line-height: 0.8em;
+}
+
+.item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -33px;
+    display: block;
+    height: 55px;
+    width: 5px;
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+}
+
+.item.selected::before, .item:hover::before {
+    background: #FF2F5A;
+}
+
+.comment {
+    float: left;
+    display: inline;
+    width: 100%;
+    border-bottom: 1px solid #F2F2F2;
+    padding: 15px 0 20px;
+    margin: 0;
+}
+
+.comment.last {
+    border: none;
+    padding-bottom: 10px;
+}
+
+.comment-img {
+    display: block;
+    float: left;
+    width: 52px;
+    height: 52px;
+    background: #FF8A00;
+    margin: 5px 15px 0 0;
+}
+
+.comment:nth-of-type(2n) .comment-img {
+    background: #47568C;
+}
+
+.comment p {
+    font-size: 12px;
+    color: #666666;
+    text-align: left;
+    line-height: 18px;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+.add-comment-area {
+    width: 100%;
+    float: left;
+    position: relative;
+    bottom: 0;
+    padding-top: 10px;
+    margin: 0;
+    overflow: hidden;
+    z-index: 999;
+}
+
+.add-comment-area .comment-img {
+    margin-top: 0;
+    background: #E6E6E6;
+}
+
+textarea {
+    width: 100px;
+    height: 20px;
+    border: none;
+    background: transparent;
+    resize: none;
+    overflow: auto;
+}
+
+textarea:focus {
+    outline: none;
+}
+
+.add-comment-area textarea {
+    float: left;
+    width: 323px;
+    height: 60px;
+    border: 1px solid #cccccc;
+    font-size: 13px;
+    color: #000;
+    padding: 5px;
+    margin: 0;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background-color: #E6E6E6;
+    width: 9px;
+    border-left: none;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #B3B3B3;
+    width: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: #aaa;
+}
+
+/* empeek-end */

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style-dev.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <script type="text/javascript" src="myApp.js"></script>
+    <title>empeek</title>
+</head>
+<body ng-app="myApp"  ng-controller="myController">
+<div class="main-wrapper">
+    <div class="nav-block">
+        <h1>Main</h1>
+        <div class="nav">
+            <ul>
+                <li class="active">Overview</li>
+            </ul>
+        </div>
+    </div>
+    <div class="content-block">
+        <div class="content-wrapper cw-left" ng-init="showDataItems()">
+            <span class="title">Items</span>
+            <input type="text" class="add-item-name" placeholder="Type name here ..." ng-model="newName" ng-click="onClickInputField($event)">
+            <button class="add-item" ng-click="addItemField()" type="submit">Add new</button>
+            <div class="item" ng-repeat="item in items" ng-click="select($index)" ng-class="{selected: $index == selected}">
+                <span class="item-name">{{item.name}}</span>
+                <span class="item-num">{{item.comments.length}}</span>
+                <button class="delete-item" type="reset" ng-click="removeItem($index)">Delete</button>
+            </div>
+        </div>
+        <div class="content-wrapper cw-right">
+            <span class="title">Comments #{{selected+1}}</span>
+            <div class="comment" ng-repeat="comment in items[selected].comments" ng-class="{'last':$last}">
+                <span class="comment-img">{{comment.img}}</span>
+                <p>{{comment.text}}</p>
+            </div>
+            <div class="add-comment-area">
+                <span class="comment-img"></span>
+                <textarea ng-model="newComment" ng-keydown="addComment(selected)" ng-click="onClickInputField($event)"></textarea>
+                </div>
+        </div>
+
+    </div>
+
+</div>
+
+</div>
+
+</body>
+
+</html>
