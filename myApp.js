@@ -55,8 +55,8 @@ app.controller('myController', function ($scope) {
                 text: $scope.newComment
             });
             $scope.newComment = '';
-            localStorage.setItem('allItems', JSON.stringify($scope.items));
         }
+        localStorage.setItem('allItems', JSON.stringify($scope.items));
     };
 
 
