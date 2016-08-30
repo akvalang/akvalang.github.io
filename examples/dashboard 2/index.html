@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="style.css" rel="stylesheet">
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="all" href="daterangepicker-bs3.css"/>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+    <script type="text/javascript" src="moment.js"></script>
+    <script type="text/javascript" src="daterangepicker.js"></script>
+    <script src="script.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#selectdaterange').daterangepicker();
+        });
+    </script>
+    <title>Dashboard</title>
+</head>
+<body>
+
+<div class="dashbrdBlock">
+    <div class="dashhead">
+        <span class="title" id="grade">Dashboard</span>
+        <div class="right">
+            <span class="tit g">Grade</span>
+            <div class="grade param" id="grade">
+                <div class="active" id="minute" value="Minute"><p>Minute</p></div>
+                <div id="hour" value="Hour"><p>Hour</p></div>
+                <div id="day" value="Day"><p>Day</p></div>
+                <div id="week" value="Week"><p>Week</p></div>
+                <div id="month" value="Month"><p>Month</p></div>
+            </div>
+            <span class="tit t">Type</span>
+            <div class="type param" id="type">
+                <div class="active" id="all" value="ALL"><p>ALL</p></div>
+                <div id="api" value="API"><p>API</p></div>
+                <div id="smtp" value="SMTP"><p>SMTP</p></div>
+            </div>
+            <form class="form-horizontal">
+                <fieldset>
+                    <div class="control-group">
+                        <label class="control-label" for="selectdaterange">Period</label>
+                        <div class="controls">
+                            <div class="input-prepend">
+                                <span class="add-on"><i class="icon-calendar"></i></span><input type="text"
+                                                                                                placeholder="16.01.2016 – 21.01.2016"
+                                                                                                name="selectdaterange"
+                                                                                                id="selectdaterange"/><img
+                                    class="calendar" src="img/calendar-icon.svg">
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+            <button type="submit" id="applybtn" class="apply" value="Apply">Apply</button>
+        </div>
+    </div>
+    <div class="dashtable">
+        <table class="main">
+            <tr>
+                <td>Data</td>
+                <td colspan="10">16.01.16</td>
+                <td colspan="5">17.01.16<img src="img/flag.svg"></td>
+            </tr>
+            <tr>
+                <td>Time</td>
+                <td>
+                    <div>00:10:23</div>
+                </td>
+                <td>
+                    <div>00:20:42</div>
+                </td>
+                <td>
+                    <div>00:30:53</div>
+                </td>
+                <td>
+                    <div>00:40:16</div>
+                </td>
+                <td>
+                    <div>00:50:00</div>
+                </td>
+                <td>
+                    <div>01:00:23</div>
+                </td>
+                <td>
+                    <div>01:10:42</div>
+                </td>
+                <td>
+                    <div>01:20:53</div>
+                </td>
+                <td>
+                    <div>01:30:16</div>
+                </td>
+                <td>
+                    <div>01:40:00</div>
+                </td>
+                <td>
+                    <div>01:50:23</div>
+                </td>
+                <td>
+                    <div>02:00:42</div>
+                </td>
+                <td>
+                    <div>02:10:53</div>
+                </td>
+                <td>
+                    <div>02:20:16</div>
+                </td>
+                <td>
+                    <div>02:30:16</div>
+                </td>
+            </tr>
+            <tr>
+                <td>Processing</td>
+                <td>96%</td>
+                <td>95%</td>
+                <td>95%</td>
+                <td class="orange">94%</td>
+                <td>96%</td>
+                <td>96%</td>
+                <td>95%</td>
+                <td>95%</td>
+                <td class="orange">94%</td>
+                <td>96%</td>
+                <td>96%</td>
+                <td>95%</td>
+                <td>95%</td>
+                <td class="orange">94%</td>
+                <td class="orange">94%</td>
+            </tr>
+            <tr>
+                <td>Average, s</td>
+                <td>6,04</td>
+                <td>4,11</td>
+                <td>8,65</td>
+                <td>4,45</td>
+                <td>6,67</td>
+                <td>6,04</td>
+                <td>4,11</td>
+                <td>8,65</td>
+                <td>4,45</td>
+                <td>6,67</td>
+                <td>6,04</td>
+                <td>4,11</td>
+                <td>8,65</td>
+                <td>4,45</td>
+                <td>4,45</td>
+            </tr>
+            <tr>
+                <td>Delta, s</td>
+                <td class="orange">0,96</td>
+                <td class="red">2,89</td>
+                <td>-1,65</td>
+                <td class="red">2,55</td>
+                <td class="orange">0,33</td>
+                <td class="orange">0,96</td>
+                <td class="red">2,89</td>
+                <td>-1,65</td>
+                <td class="red">2,55</td>
+                <td>0,33</td>
+                <td class="orange">0,96</td>
+                <td class="red">2,89</td>
+                <td>-1,65</td>
+                <td class="red">2,55</td>
+                <td class="red">2,55</td>
+            </tr>
+            <tr>
+                <td>Come, pts</td>
+                <td>105 355</td>
+                <td>109 755</td>
+                <td>116 465</td>
+                <td>106 103</td>
+                <td>109 401</td>
+                <td>105 355</td>
+                <td>109 755</td>
+                <td>116 465</td>
+                <td>106 103</td>
+                <td>109 401</td>
+                <td>105 355</td>
+                <td>109 755</td>
+                <td>116 465</td>
+                <td>106 103</td>
+                <td>106 103</td>
+            </tr>
+            <tr>
+                <td>Done, pts</td>
+                <td>101 141</td>
+                <td>104 157</td>
+                <td>110 642</td>
+                <td>99 312</td>
+                <td>105 244</td>
+                <td>101 141</td>
+                <td>104 157</td>
+                <td>110 642</td>
+                <td>99 312</td>
+                <td>105 244</td>
+                <td>101 141</td>
+                <td>104 157</td>
+                <td>110 642</td>
+                <td>99 312</td>
+                <td>99 312</td>
+            </tr>
+            <tr>
+                <td>WebAPI, s</td>
+                <td>0,75</td>
+                <td>1,09</td>
+                <td class="red">1,48</td>
+                <td>0,98</td>
+                <td class="orange">1,21</td>
+                <td>0.75</td>
+                <td>1,09</td>
+                <td class="red">1,48</td>
+                <td>0,98</td>
+                <td class="orange">1,21</td>
+                <td>0,75</td>
+                <td>1,09</td>
+                <td class="red">1,48</td>
+                <td>0,98</td>
+                <td>0,98</td>
+            </tr>
+            <tr>
+                <td>Exim, s</td>
+                <td>0,72</td>
+                <td>0,74</td>
+                <td>0,51</td>
+                <td class="orange">0,86</td>
+                <td>0,72</td>
+                <td>0,72</td>
+                <td>0,74</td>
+                <td>0,51</td>
+                <td class="orange">0,86</td>
+                <td>0,72</td>
+                <td>0,72</td>
+                <td>0,74</td>
+                <td>0,51</td>
+                <td class="orange">0,86</td>
+                <td class="orange">0,86</td>
+            </tr>
+            <tr>
+                <td>UniAdapter, s</td>
+                <td>0,82</td>
+                <td>0,1</td>
+                <td class="orange">1,71</td>
+                <td>0,51</td>
+                <td>0,33</td>
+                <td>0,82</td>
+                <td>0,1</td>
+                <td class="orange">1,71</td>
+                <td>0,51</td>
+                <td>0,33</td>
+                <td>0,82</td>
+                <td>0,1</td>
+                <td class="orange">1,71</td>
+                <td>0,51</td>
+                <td>0,51</td>
+            </tr>
+            <tr>
+                <td>Consumer,s</td>
+                <td>0,28</td>
+                <td>0,93</td>
+                <td class="red">2,75</td>
+                <td class="orange">1,01</td>
+                <td class="red">2,63</td>
+                <td>0,28</td>
+                <td>0,93</td>
+                <td class="red">2,75</td>
+                <td class="orange">1,01</td>
+                <td class="red">2,63</td>
+                <td>0,28</td>
+                <td>0,93</td>
+                <td class="red">2,75</td>
+                <td class="orange">1,01</td>
+                <td class="orange">1,01</td>
+            </tr>
+            <tr>
+                <td>UniCore, s</td>
+                <td class="orange">1,05</td>
+                <td class="orange">1,17</td>
+                <td>0,15</td>
+                <td>0,58</td>
+                <td class="orange">1,2</td>
+                <td class="orange">1,05</td>
+                <td class="orange">1,17</td>
+                <td>0,15</td>
+                <td>0,58</td>
+                <td class="orange">1,2</td>
+                <td class="orange">1,05</td>
+                <td class="orange">1,17</td>
+                <td>0,15</td>
+                <td>0,58</td>
+                <td>0,58</td>
+            </tr>
+            <tr>
+                <td>SMTP, s</td>
+                <td class="red">2,4</td>
+                <td>0,31</td>
+                <td class="orange">1,7</td>
+                <td>0,61</td>
+                <td>0,58</td>
+                <td class="red">2,4</td>
+                <td>0,31</td>
+                <td class="orange">1,7</td>
+                <td>0,61</td>
+                <td>0,58</td>
+                <td class="red">2,4</td>
+                <td>0,31</td>
+                <td class="orange">1,7</td>
+                <td>0,61</td>
+                <td>0,61</td>
+            </tr>
+            <tr>
+                <td>
+                    <table class="graph num bl">
+                        <tr>
+                            <td><img class="bl-rect" src="img/bluerect.svg">16,0</td>
+                        </tr>
+                        <tr>
+                            <td>12,0</td>
+                        </tr>
+                        <tr>
+                            <td>8,0</td>
+                        </tr>
+                        <tr>
+                            <td>4,0</td>
+                        </tr>
+                        <tr>
+                            <td>0,0</td>
+                        </tr>
+                    </table>
+                    <table class="graph sec">
+                        <tr>
+                            <td rowspan="5"><img class="sec" src="img/section-2.svg"></td>
+                        </tr>
+                    </table>
+                    <table class="graph num re">
+                        <tr>
+                            <td><img class="rd-rec" src="img/redrect.svg">98%</td>
+                        </tr>
+                        <tr>
+                            <td>96%</td>
+                        </tr>
+                        <tr>
+                            <td>96%</td>
+                        </tr>
+                        <tr>
+                            <td>92%</td>
+                        </tr>
+                        <tr>
+                            <td>88%</td>
+                        </tr>
+                    </table>
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            <tr>
+                <td><img src="img/good.svg">Good</td>
+                <td colspan="10"><img src="img/processing.svg">Processing<img src="img/average.svg">Average</td>
+                <td colspan="5"></td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+</body>
+</html>

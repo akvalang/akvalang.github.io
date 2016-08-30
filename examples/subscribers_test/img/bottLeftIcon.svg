@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="50px" height="26px" viewBox="0 0 50 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.4.3 (16618) - http://www.bohemiancoding.com/sketch -->
+    <title>Untitled</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#ECECEC" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="50-btn" sketch:type="MSLayerGroup" transform="translate(1.000000, 1.000000)">
+            <path d="M2.61358869e-17,3.99005301 C2.90141668e-17,1.78640758 1.79405245,0 4.00989318,0 L43.9901068,0 C46.2047097,0 48,1.78429328 48,3.99005301 L48,20.009947 C48,22.2135924 46.2059475,24 43.9901068,24 L4.00989318,24 C1.79529033,24 2.33054527e-18,22.2157067 5.21158673e-18,20.009947 L2.61358869e-17,3.99005301 Z" id="btn-bg" stroke="#C5C5C5" fill="url(#linearGradient-1)" sketch:type="MSShapeGroup"></path>
+            <text id="50" sketch:type="MSTextLayer" font-family="PT Sans" font-size="12" font-weight="normal" fill="#424950">
+                <tspan x="8" y="15">50</tspan>
+            </text>
+            <path d="M34.66109,12.583441 L34.66109,12.583441 L38.077967,16 L38.7388981,15.3385921 L35.322339,11.9218741 L38.5831231,8.66124898 L37.922033,8 L34,11.9218741 L34.66109,12.583441 Z" id="Shape-Copy-15" fill="#424950" sketch:type="MSShapeGroup" transform="translate(36.369449, 12.000000) rotate(-90.000000) translate(-36.369449, -12.000000) "></path>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="js/jquery.easydropdown.min.js" type="text/javascript"></script>
+    <link href="css/easydropdown.css" rel="stylesheet" type="text/css">
+    <title>Anti-Spam policy</title>
+</head>
+<body>
+<header class="subHeader">
+    <nav>
+        <a href="#" class="logo"><img src="img/logo.svg" alt="UniSender"></a>
+        <ul id="mainTopNav">
+            <li class="active-main-li"><a href="#">Campaigns</a></li>
+            <li><a href="#">Subscribers</a></li>
+            <li><a href="#">Webforms</a></li>
+            <li><a href="#">Automation</a></li>
+            <li class="userLink" id="dropDownSub" onclick="dropDown(this)"><a href="#" class="userProfile">user.name</a><img
+                    src="img/sophie.svg">
+
+                <ul class="submenu profile-links">
+                    <li><a href="#"><img src="img/profile-icon.svg">Profile</a></li>
+                    <li><a href="#"><img src="img/setup-icon.svg">Account Setup</a></li>
+                    <li><a href="#"><img src="img/report-icon.svg">Report Documents</a></li>
+                    <li><a href="#"><img src="img/price-icon.svg">Price Planes</a></li>
+                    <li><a href="#"><img src="img/control-icon.svg">Account control</a></li>
+                    <li><a href="#"><img src="img/loguot-icon.svg">Log out</a></li>
+                </ul>
+                <ul class="submenu stat">
+                    <li>
+                        <div>
+                            <span class="using">Using<img id="refresh" onclick="onRefreshClick(this)" id="refresh"
+                                                          src="img/refresh.svg" alt="refresh"></span>
+                            <span class="sum name">Sent Emails</span>
+                            <div class="progress">
+                                <progress id="elem" class="menuBar"></progress>
+                            </div>
+                            <span class="sum">3 123 750 of 10 137 500 - 30%</span>
+                            <span class="sum name">Adresses used</span>
+                            <div class="progress">
+                                <progress id="elem1" class="menuBar"></progress>
+                            </div>
+                            <span class="sum">100 000 of 750 000 - 16%</span>
+                        </div>
+                    </li>
+                    <li class="stat">
+                        <div>
+                            <span class="amount name">Balance</span>
+                            <span class="amount">$ 734,034.12</span>
+                            <button type="submit" id="refill"><label for="refill">Refill</label></button>
+                            <span class="sum name plan">&lt;&lt;<a href="#" class="plan">Pro 500</a>&gt;&gt; is current pricing plan</span>
+                            <span class="date">10 FEB, 15 at 10:41</span>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+    </nav>
+</header>
+<main class="main">
+    <div class="mainBlock">
+        <h1>Anti-Spam Policy</h1>
+        <div class="right-pos-top">
+            <button type="submit" class="download-btn">Download, PDF 1.3 Mb</button>
+            <button type="submit" class="print-btn">Print</button>
+        </div>
+        <span class="mid-tit">What we consider as spam</span>
+        <p>Please read this Anti-Spam Policy (the "Policy", "Anti-Spam Policy") carefully before using the <a href="#">www.unisender.com</a> website (the "Service") operated by UniSender ("us", "we", or "our"). This Policy is an integral part of the Terms of Service (<a href="#">http://www.unisender.com/en/terms/</a>). The capitalized terms used in this Policy shall have the same meaning as defined in the Terms of Service unless expressly stated otherwise in this Policy.</p>
+        <p>The present Policy informs you of how we treat spam and other threats related to group electronic mail sending.</p>
+        <p>Notwithstanding any provisions under any applicable laws and regulations we consider any mass messages to subscribers or recipients without their prior consent to receive such massages as a spam. When using UniSender the user must follow the following rules:</p>
+        <ul>
+            <li>Subject and message text should not contain false, incorrect or misleading information;</li>
+            <li>Message should not be sent to subscribers without their prior explicit consent;</li>
+            <li>User actions should not contradict applicable legislation including the specific terms of legislation on marketing and advertising.</li>
+            </ul>
+        <p>UniSender Users undertake not to use the service for sending spam.</p>
+        <span class="mid-tit">Our actions in the event of non-compliance with anti-spam policy</span>
+        <p>Upon receipt of complaints related to violation of the rules of this Policy the services will be suspended pending clarification of details of violation.  Freezing of unused funds is also possible for the period of clarification needed to receive. As a rule, the decision on the relevance of complaints is taken during 24 hours.</p>
+        <span class="mid-tit">How we address the spam issues </span>
+        <p>We make every effort so that the massages using our Service successfully reaches its destination. In order to prevent sending unwanted massages we do the following:</p>
+        <ul>
+            <li>We put on a mandatory pre-moderation all outgoing mailing;</li>
+            <li>Block the accounts of those users who are trying to send spam;</li>
+            <li>Prohibit emailing to the addresses to which we believe the User did not obtain express consent to send such  messages;</li>
+            <li>In every email-message we insert a link opt out from receiving such messages;</li>
+            <li>Continuously monitor public black lists, and take immediate steps to remove them from our mail servers;</li>
+            <li>Furthermore,  we have special emails, that are SPAM traps for parser software as one of the SPAM countermeasures. After receiving letters on these emails, we block senders automatically.</li>
+            </ul>
+        <span class="mid-tit">Spam complaints received from UniSender user</span>
+        <p>If you have received spam with any indication of the UniSender service, please let us know by e-mail <a href="abuse@unisender.com">abuse@unisender.com</a>. Attach a received unwanted message, and specify the date and time when the message was received. </p>
+        <p>We do not cooperate with organizations or individuals conducting unwanted e-mail sending (i.e. spammers). Such accounts are blocked immediately.</p>
+
+    </div>
+
+</main>
+<div class="subFooter">
+    <div>
+        <div class="leftBlck">
+            <span class="copy">&copy; UniSender, 2008-2016</span>
+            <a href="#">Terms of Use</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Anti-Spam Policy</a>
+        </div>
+        <div class="rightBlck">
+            <select class="dropdown">
+                <option value="eng">English</option>
+                <option value="ukr">Ukranian</option>
+            </select>
+        </div>
+    </div>
+</div>
+
+</body>
+<script src="js/script.js" type="text/javascript"></script>
+</html>

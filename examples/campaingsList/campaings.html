@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="js/jquery.easydropdown.min.js" type="text/javascript"></script>
+    <script src="js/datepicker.min.js"></script>
+    <script src="js/datepicker.en.js"></script>
+    <script src="js/modernizr.js"></script>
+    <link href="css/datepicker.min.css" rel="stylesheet" type="text/css">
+    <link href="css/easydropdown.css" rel="stylesheet" type="text/css">
+    <title>Campaigns</title>
+</head>
+<body>
+<header class="campHeader">
+    <nav>
+        <a href="#" class="logo"><img src="img/logo.svg" alt="UniSender"></a>
+        <ul id="mainTopNav">
+            <li class="active-main-li"><a href="#">Campaigns</a></li>
+            <li><a href="#">Subscribers</a></li>
+            <li><a href="#">Webforms</a></li>
+            <li><a href="#">Automation</a></li>
+            <li class="userLink" id="dropDownSub" onclick="dropDown(this)"><a href="#" class="userProfile">user.name</a><img src="img/sophie.svg">
+
+                <ul class="submenu profile-links">
+                    <li><a href="#"><img src="img/profile-icon.svg">Profile</a></li>
+                    <li><a href="#"><img src="img/setup-icon.svg">Account Setup</a></li>
+                    <li><a href="#"><img src="img/report-icon.svg">Report Documents</a></li>
+                    <li><a href="#"><img src="img/price-icon.svg">Price Planes</a></li>
+                    <li><a href="#"><img src="img/control-icon.svg">Account control</a></li>
+                    <li><a href="#"><img src="img/loguot-icon.svg">Log out</a></li>
+                </ul>
+                <ul class="submenu stat">
+                    <li>
+                        <div>
+                            <span class="using">Using<img id="refresh" onclick="onRefreshClick(this)" id="refresh" src="img/refresh.svg" alt="refresh"></span>
+                            <span class="sum name">Sent Emails</span>
+                            <div class="progress">
+                                <progress id="elem" class="menuBar"></progress>
+                            </div>
+                            <span class="sum">3 123 750 of 10 137 500 - 30%</span>
+                            <span class="sum name">Adresses used</span>
+                            <div class="progress">
+                                <progress id="elem1" class="menuBar"></progress>
+                            </div>
+                            <span class="sum">100 000 of 750 000 - 16%</span>
+                        </div>
+                    </li>
+                    <li class="stat">
+                        <div>
+                            <span class="amount name">Balance</span>
+                            <span class="amount">$ 734,034.12</span>
+                            <button type="submit" id="refill"><label for="refill">Refill</label></button>
+                            <span class="sum name plan">&lt;&lt;<a href="#" class="plan">Pro 500</a>&gt;&gt; is current pricing plan</span>
+                            <span class="date">10 FEB, 15 at 10:41</span>
+                        </div>
+                    </li>
+                </ul>
+        </li>
+        </ul>
+
+    </nav>
+    <nav class="subNav">
+        <ul>
+            <li class="activeSM"><a href="#">Segments & Subscribers</a></li>
+            <li><a href="#">Analytic</a></li>
+            <li><a href="#">History</a></li>
+            <li><a href="#">Files</a></li>
+        </ul>
+    </nav>
+    <div class="top-divider"></div>
+</header>
+<main class="main">
+    <div class="mainBlock">
+        <h1>Campaings</h1>
+        <nav class="campMenu">
+            <ul>
+                <li class="active-camp"><a href="#">Sent</a></li>
+                <li><a href="#">Sending</a></li>
+                <li><a href="#">Sheduled</a></li>
+                <li><a href="#">Paused</a></li>
+                <li><a href="#">Drafts</a></li>
+                <li><a href="#">Archive</a></li>
+                <li><a href="#">Deleted</a></li>
+            </ul>
+            <div class="templatesDD">
+                <ul class="dd-template">
+                    <li class="dd-templ-first" id="dd-templ"><a href="#" class="dd-templ-first"> Create new Campaign</a>
+                        <ul class="dd-templ-second">
+                            <li><a href="#">
+                                <img src="img/import.svg">
+                                <span class="templ-tit">Import from a CSV or TXT file</span>
+                                <span class="templ-desc">It is a long established fact that a readerwill be distracted</span>
+                            </a>
+                            </li>
+                            <li><a href="#">
+                                <img src="img/xls.svg">
+                                <span class="templ-tit">Copy/Paste from Excel</span>
+                                <span class="templ-desc">Readable content of a page when lookingat its layout packages and web</span>
+                            </a>
+                            </li>
+                            <li><a href="#">
+                                <img src="img/subscrbrs.svg">
+                                <span class="templ-tit">Add a single subscriber</span>
+                                <span class="templ-desc">Readable content of a page when lookingat its layout packages and web</span>
+                            </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="mid-divider"></div>
+        <div class="parameters">
+            <select class="dropdown">
+                <option class="label">Regular campaign</option>
+                <option>Regular campaign</option>
+                <option>Regular campaign</option>
+            </select>
+            <select class="dropdown">
+                <option class="label">All clients</option>
+                <option>Client 1</option>
+                <option>Client 2</option>
+                <option>Client 3</option>
+                <option>Client 4</option>
+                <option>Client 5</option>
+                <option>Client 6</option>
+                <option>Client 7</option>
+                <option>Client 8</option>
+            </select>
+            <div class="calendar">
+                <img class="calendarIcon" src="img/calendr-icon.svg">
+                <input id="datapicker"
+                       type="text"
+                       data-range="true"
+                       data-multiple-dates-separator=" - "
+                       data-language="en"
+                       class="datepicker-here"
+                />
+            </div>
+            <button id="archive" type="submit" class="sort-btn"><img src="img/archive-icon.svg">Archive</button>
+            <button id="delete" type="reset" class="sort-btn"><img src="img/delete-icon.svg">Delete</button>
+
+            <div class="view">
+                <a href="#" class="selected-view"><img src="img/line-view-icon.svg"></a>
+                <a href="#"><img src="img/block-view-icon.svg"></a>
+            </div>
+            <form class="search">
+            <input type="text" placeholder="Test campaing" required>
+            <button type="submit" class="search-btn"><img src="img/search-icon.svg"/></button>
+        </form>
+        </div>
+        <div class="table">
+            <table id="tableList">
+                <tr>
+                    <th>
+                        <span class="th-carat"></span>
+                    </th>
+                    <th><a href="#">Date<img src="img/date-icon.svg"></a></th>
+                    <th><a href="#">Preview</a></th>
+                    <th><a href="#">Subject</a></th>
+                    <th><a href="#">Sent</a></th>
+                    <th><a href="#">Delivered</a></th>
+                    <th><a href="#">Opened</a></th>
+                    <th><a href="#">Clicked</a></th>
+                </tr>
+                <tr>
+                    <td><input id="list1" type="checkbox" class="checkLine">
+                        <label for="list1"></label>
+                    </td>
+                    <td>
+                        <span class="similar">Edited on</span>
+                        <span class="dateLine">8 Nov, 15</span>
+                        <span class="similar">19:30:23</span>
+                    </td>
+                    <td><img src="img/templ1.svg"></td>
+                    <td>
+                        <span class="similar">Regular campaign - vol. 1.2</span>
+                        <span class="description">Cicero are also reproduced ih their exact original form, about lablabla</span>
+                        <span class="similar">All CLients</span>
+                    </td>
+                    <td>
+                        <span class="sumLine">10 125 341</span>
+                        <progress value="90" max="100" class="blueBar"></progress>
+                    </td>
+                    <td>
+                        <span class="sumLine">10 00 000</span>
+                        <progress value="70" max="100" class="greenBar"></progress>
+                    </td>
+                    <td>
+                        <span class="sumLine">7 032 239</span>
+                        <progress value="40" max="100" class="orangeBar"></progress>
+                    </td>
+                    <td>
+                        <span class="sumLine">5 125 341</span>
+                        <progress value="25" max="100" class="redBar"></progress>
+                    </td>
+                </tr>
+                <tr>
+                    <td><input id="list2" type="checkbox" class="checkLine">
+                        <label for="list2"></label>
+                    </td>
+                    <td>
+                        <span class="similar">Edited on</span>
+                        <span class="dateLine">6 Nov, 15</span>
+                        <span class="similar">09:14:51</span>
+                    </td>
+                    <td><img src="img/templ2.svg"></td>
+                    <td>
+                        <span class="similar">Regular campaign - vol. 1.2</span>
+                        <span class="description">Your premium accoun expired in 5 days</span>
+                        <span class="similar">All CLients</span>
+                    </td>
+                    <td>
+                        <span class="sumLine">800</span>
+                        <progress value="90" max="100" class="blueBar"></progress>
+                    </td>
+                    <td>
+                        <span class="sumLine">603</span>
+                        <progress value="60" max="100" class="greenBar"></progress>
+                    </td>
+                    <td>
+                        <span class="sumLine">435</span>
+                        <progress value="20" max="100" class="orangeBar"></progress>
+                    </td>
+                    <td>
+                        <span class="sumLine">150</span>
+                        <progress value="15" max="100" class="redBar"></progress>
+                    </td>
+                </tr>
+                <tr>
+                    <td><input id="list3" type="checkbox" class="checkLine">
+                        <label for="list3"></label>
+                    </td>
+                    <td>
+                        <span class="similar">Edited on</span>
+                        <span class="dateLine">6 Nov, 15</span>
+                        <span class="similar">03:36:45</span>
+                    </td>
+                    <td><img src="img/templ3.svg"></td>
+                    <td>
+                        <span class="similar">Season campaign</span>
+                        <span class="description">Test campaign about season sale</span>
+                        <span class="similar">All CLients</span>
+                    </td>
+                    <td>
+                        <span class="sumLine">101 893</span>
+                        <progress value="85" max="100" class="blueBar"></progress>
+                    </td>
+                    <td>
+                        <span class="sumLine">79 000</span>
+                        <progress value="85" max="100" class="greenBar"></progress>
+                    </td>
+                    <td>
+                        <span class="sumLine">54 345</span>
+                        <progress value="50" max="100" class="orangeBar"></progress>
+                    </td>
+                    <td>
+                        <span class="sumLine">21 234</span>
+                        <progress value="30" max="100" class="redBar"></progress>
+                    </td>
+                </tr>
+                <tr>
+                    <td><input id="list4" type="checkbox" class="checkLine">
+                        <label for="list4"></label>
+                    </td>
+                    <td>
+                        <span class="similar">Edited on</span>
+                        <span class="dateLine">5 Nov, 15</span>
+                        <span class="similar">11:37:50</span>
+                    </td>
+                    <td><img src="img/templ4.svg"></td>
+                    <td>
+                        <span class="similar">Beta version campaign 3</span>
+                        <span class="description">Try our new features in beta version </span>
+                        <span class="similar">All CLients</span>
+                    </td>
+                    <td>
+                        <span class="sumLine">9 456</span>
+                        <progress value="98" max="100" class="blueBar"></progress>
+                    </td>
+                    <td>
+                        <span class="sumLine">16 754</span>
+                        <progress value="55" max="100" class="greenBar"></progress>
+                    </td>
+                    <td>
+                        <span class="sumLine">3 456</span>
+                        <progress value="35" max="100" class="orangeBar"></progress>
+                    </td>
+                    <td>
+                        <span class="sumLine">1 934</span>
+                        <progress value="15" max="100" class="redBar"></progress>
+                    </td>
+                </tr>
+                <tr>
+                    <td><input id="list5" type="checkbox" class="checkLine">
+                        <label for="list5"></label>
+                    </td>
+                    <td>
+                        <span class="similar">Edited on</span>
+                        <span class="dateLine">5 Nov, 15</span>
+                        <span class="similar">11:36:01</span>
+                    </td>
+                    <td><img src="img/templ5.svg"></td>
+                    <td>
+                        <span class="similar">Regular campaign - vol. 1.2</span>
+                        <span class="description">Season greatings from our company</span>
+                        <span class="similar">All CLients</span>
+                    </td>
+                    <td>
+                        <span class="sumLine">7 023 496</span>
+                        <progress value="99" max="100" class="blueBar"></progress>
+                    </td>
+                    <td>
+                        <span class="sumLine">7 000 401</span>
+                        <progress value="85" max="100" class="greenBar"></progress>
+                    </td>
+                    <td>
+                        <span class="sumLine">5 546 678</span>
+                        <progress value="65" max="100" class="orangeBar"></progress>
+                    </td>
+                    <td>
+                        <span class="sumLine">2 345 576</span>
+                        <progress value="50" max="100" class="redBar"></progress>
+                    </td>
+                </tr>
+                <tr>
+                    <td><input id="list6" type="checkbox" class="checkLine">
+                        <label for="list6"></label>
+                    </td>
+                    <td>
+                        <span class="similar">Edited on</span>
+                        <span class="dateLine">4 Nov, 15</span>
+                        <span class="similar">12:42:32</span>
+                    </td>
+                    <td><img src="img/templ6.svg"></td>
+                    <td>
+                        <span class="similar">System massegas campaign 1</span>
+                        <span class="description">System message after registration</span>
+                        <span class="similar">All CLients</span>
+                    </td>
+                    <td>
+                        <span class="sumLine">10 125 341</span>
+                        <progress value="90" max="100" class="blueBar"></progress>
+                    </td>
+                    <td>
+                        <span class="sumLine">10 00 000</span>
+                        <progress value="90" max="100" class="greenBar"></progress>
+                    </td>
+                    <td>
+                        <span class="sumLine">7 032 239</span>
+                        <progress value="44" max="100" class="orangeBar"></progress>
+                    </td>
+                    <td>
+                        <span class="sumLine">5 125 341</span>
+                        <progress value="34" max="100" class="redBar"></progress>
+                    </td>
+                </tr>
+                <tr>
+                    <td><input id="list7" type="checkbox" class="checkLine">
+                        <label for="list7"></label>
+                    </td>
+                    <td>
+                        <span class="similar">Edited on</span>
+                        <span class="dateLine">3 Nov, 15</span>
+                        <span class="similar">11:53:47</span>
+                    </td>
+                    <td><img src="img/templ2.svg"></td>
+                    <td>
+                        <span class="similar">Beta version campaign 2</span>
+                        <span class="description">Something you should know about features in new beta version</span>
+                        <span class="similar">All CLients</span>
+                    </td>
+                    <td>
+                        <span class="sumLine">2 312</span>
+                        <progress value="97" max="100" class="blueBar"></progress>
+                    </td>
+                    <td>
+                        <span class="sumLine">1 903</span>
+                        <progress value="60" max="100" class="greenBar"></progress>
+                    </td>
+                    <td>
+                        <span class="sumLine">921</span>
+                        <progress value="22" max="100" class="orangeBar"></progress>
+                    </td>
+                    <td>
+                        <span class="sumLine">769</span>
+                        <progress value="18" max="100" class="redBar"></progress>
+                    </td>
+                </tr>
+                <tr>
+                    <td><input id="list8" type="checkbox" class="checkLine">
+                        <label for="list8"></label>
+                    </td>
+                    <td>
+                        <span class="similar">Edited on</span>
+                        <span class="dateLine">3 Nov, 15</span>
+                        <span class="similar">05:32:52</span>
+                    </td>
+                    <td><img src="img/templ3.svg"></td>
+                    <td>
+                        <span class="similar">System messages campaign 2</span>
+                        <span class="description">Reasons why you may use our product in your next project</span>
+                        <span class="similar">All CLients</span>
+                    </td>
+                    <td>
+                        <span class="sumLine">190</span>
+                        <progress value="99" max="100" class="blueBar"></progress>
+                    </td>
+                    <td>
+                        <span class="sumLine">180</span>
+                        <progress value="86" max="100" class="greenBar"></progress>
+                    </td>
+                    <td>
+                        <span class="sumLine">85</span>
+                        <progress value="50" max="100" class="orangeBar"></progress>
+                    </td>
+                    <td>
+                        <span class="sumLine">78</span>
+                        <progress value="30" max="100" class="redBar"></progress>
+                    </td>
+                </tr>
+                <tr>
+                    <td><input id="list9" type="checkbox" class="checkLine">
+                        <label for="list9"></label>
+                    </td>
+                    <td>
+                        <span class="similar">Edited on</span>
+                        <span class="dateLine">2 Nov, 15</span>
+                        <span class="similar">12:44:31</span>
+                    </td>
+                    <td><img src="img/templ6.svg"></td>
+                    <td>
+                        <span class="similar">Regular campaign - vol. 1.2</span>
+                        <span class="description">Cicero are also reproduced ih their exact original form, about lablabla</span>
+                        <span class="similar">All CLients</span>
+                    </td>
+                    <td>
+                        <span class="sumLine">2</span>
+                        <progress value="100" max="100" class="blueBar"></progress>
+                    </td>
+                    <td>
+                        <span class="sumLine">1</span>
+                        <progress value="50" max="100" class="greenBar"></progress>
+                    </td>
+                    <td>
+                        <span class="sumLine">0</span>
+                        <progress value="5" max="100" class="orangeBar"></progress>
+                    </td>
+                    <td>
+                        <span class="sumLine">0</span>
+                        <progress value="5" max="100" class="redBar"></progress>
+                    </td>
+                </tr>
+                <tr>
+                <td><input id="list10" type="checkbox" class="checkLine">
+                    <label for="list10"></label>
+                </td>
+                <td>
+                    <span class="similar">Edited on</span>
+                    <span class="dateLine">1 Nov, 15</span>
+                    <span class="similar">02:38:49</span>
+                </td>
+                <td><img src="img/templ4.svg"></td>
+                <td>
+                    <span class="similar">Beta version campaign 1</span>
+                    <span class="description">We are starting working on our new beta version. What do with</span>
+                    <span class="similar">All CLients</span>
+                </td>
+                <td>
+                    <span class="sumLine">798</span>
+                    <progress value="95" max="100" class="blueBar"></progress>
+                </td>
+                <td>
+                    <span class="sumLine">743</span>
+                    <progress value="95" max="100" class="greenBar"></progress>
+                </td>
+                <td>
+                    <span class="sumLine">545</span>
+                    <progress value="50" max="100" class="orangeBar"></progress>
+                </td>
+                <td>
+                    <span class="sumLine">432</span>
+                    <progress value="47" max="100" class="redBar"></progress>
+                </td>
+            </tr>
+
+            </table>
+        </div>
+
+            </div>
+        <div class="preview">
+            <div>
+            <div class="leftBlck">
+                <span>View</span>
+                <select class="dropdown">
+                    <option selected>10</option>
+                    <option>20</option>
+                    <option>50</option>
+                </select>
+            </div>
+            <div class="rightBlck">
+                <span>1-40 <i style="font-family: 'PT Sans',serif">of</i> 40</span>
+                <nav role="navigation">
+                <ul class="cd-pagination custom-buttons">
+                    <li class="button"><a href="#">Prev</a></li>
+                    <li class="button"><a href="#">Next</a></li>
+                </ul>
+            </nav>
+            </div>
+</div>
+        </div>
+        <div class="campFooter">
+            <div>
+            <div class="leftBlck">
+                <span class="copy">&copy; UniSender, 2008-2016</span>
+                <a href="#">Terms of Use</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Anti-Spam Policy</a>
+            </div>
+            <div class="rightBlck">
+                <select class="dropdown">
+                    <option value="eng">English</option>
+                    <option value="ukr">Ukranian</option>
+                </select>
+            </div>
+                </div>
+        </div>
+    </div>
+</main>
+</body>
+<script src="js/script.js" type="text/javascript"></script>
+</html>

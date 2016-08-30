@@ -1,0 +1,146 @@
+html{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "Helvetica", Helvetica, Arial, sans-serif;
+}
+
+.block{
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 300px;
+    min-width: 300px;
+    height: auto;
+    margin-left: -125px;
+    margin-top: -75px;
+}
+
+.list-page{
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: -100px;
+    height: auto;
+    margin-left: -125px;
+    margin-top: -75px;
+}
+
+.tooltip{
+    display: block;
+    width: 80px;
+    height:10px;
+    background: #D0021B;
+    color: #ffffff;
+    font-size: 12px;
+    text-align: center;
+    border-radius: 3px;
+    line-height: 0.9em;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    margin: 0 auto 3px;
+    padding: 10px 0;
+}
+
+div.arrow {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    margin: -40px 115px;
+}
+
+div .arrow {
+    border-top-color: rgb(208, 2, 27);
+    border-bottom: 0;
+}
+
+.top{
+    display: inline-block;
+    width: 100%;
+    float: left;
+}
+
+
+.icon{
+    display: block;
+    float: left;
+    width: 14px;
+    height: 16px;
+    margin: 10px 5px 0 60px;
+}
+
+.top h1{
+    width: auto;
+}
+
+h1{
+    font-size: 16px;
+    font-weight: bold;
+    text-align: left;
+    padding: 0;
+    margin: 12px 0;
+}
+
+input[type="password"]{
+    width: 240px;
+    height: 32px;
+    text-align: center;
+    border: 1px solid #cccccc;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    margin: 0 3px 15px 3px;
+    padding: 0;
+}
+
+button{
+    background: #cccccc;
+    border: none;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    display: block;
+    width: 80px;
+    height: 28px;
+    font-family: "Helvetica Regular", Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    color: #ffffff;
+    margin: 0 0 10px 85px;
+    cursor: pointer;
+}
+
+
+.active {
+    background: #ffffff;
+    background: radial-gradient(#cccccc -200%, #ffffff 110%);
+    background: -moz-radial-gradient(#cccccc -200%, #ffffff 110%);
+    background: -webkit-radial-gradient(#cccccc -200%, #ffffff 110%);
+    background: -o-radial-gradient(#cccccc -200%, #ffffff 110%);
+    background: -ms-radial-gradient (#cccccc -200%, #ffffff  110%);
+    border: 1px solid #cccccc;
+    color: #000000;
+}
+
+#tooltip{
+    position: absolute;
+    top: -54px;
+}
+
+.google{
+    color: #eeeeee;
+    text-align: center;
+    font-size: 50px;
+    margin-top: 100px;
+}
+
+a#logout{
+    border: 1px solid #000;
+    padding: 5px 15px;
+    border-radius: 15px;
+}

@@ -1,0 +1,613 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "HelveticaNeueRegular", serif;
+}
+
+@font-face {
+    font-family: "HelveticaNeueRegular";
+    src: url("../fonts/HelveticaNeue/HelveticaNeue-Regular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "HelveticaNeueMedium";
+    src: url("../fonts/HelveticaNeue/HelveticaNeue-Medium.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "HelveticaNeueBold";
+    src: url("../fonts/HelveticaNeue/HelveticaNeue-Bold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+.dashbrdBlock {
+    display: block;
+    width: 1160px;
+    min-width: 1160px;
+    height: 460px;
+    min-height: 460px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -237px;
+    margin-left: -580px;
+}
+
+.dashhead {
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.title {
+    font-family: "HelveticaNeueBold", serif;
+    font-size: 112.5%;
+    margin-right: 10px;
+}
+
+.status{
+    font-size: 75%;
+    font-family: "HelveticaNeueMedium", serif;
+    color: #000000;
+}
+
+.color-stat{
+    display: inline-block;
+    position: relative;
+    top: 1px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #7ed321;
+    margin: 0 5px;
+}
+
+.right {
+    display: inline-block;
+    float: right;
+    height: 30px;
+}
+
+span.tit, .control-label, .period {
+    float: left;
+    font-family: "HelveticaNeueRegular", serif;
+    font-size: 62.5%;
+    color: #9B9B9B;
+    font-weight: normal;
+}
+
+span.tit, .period  {
+    position: relative;
+    top: -16px;
+}
+
+span.tit.g {
+    left: 26px;
+}
+
+span.tit.t {
+    left: 20px;
+}
+
+.period{
+    top: 5px;
+}
+
+.param {
+    display: inline-block;
+    float: left;
+    margin-bottom: 20px;
+}
+
+.grade div:nth-of-type(1), .type div:nth-of-type(1) {
+    border-left: 1px solid #979797;
+    border-radius: 3px 0 0 3px;
+    -webkit-border-radius: 3px 0 0 3px;
+    -moz-border-radius: 3px 0 0 3px;
+}
+
+.grade div:nth-last-of-type(1), .type div:nth-last-of-type(1) {
+    border-radius: 0 3px 3px 0;
+    -webkit-border-radius: 0 3px 3px 0;
+    -moz-border-radius: 0 3px 3px 0;
+}
+
+.param div {
+    display: block;
+    height: 22px;
+    padding: 0 20px;
+    float: left;
+    font-family: "HelveticaNeueRegular", serif;
+    font-size: 75%;
+    line-height: 0;
+    border: 1px solid #979797;
+    border-left: none;
+}
+
+.param div p{
+    position: relative;
+    top: -1px;
+}
+
+.param div, button#applybtn {
+    background: #ffffff;
+    background: -moz-linear-gradient(top, #ffffff 0%, #f3f3f3 49%, #ECECEC 50%, #f3f3f3 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, #ffffff), color-stop(49%, #f3f3f3), color-stop(50%, #ECECEC), color-stop(100%, #f3f3f3));
+    background: -webkit-linear-gradient(top, #ffffff 0%, #f3f3f3 49%, #ECECEC 50%, #f3f3f3 100%);
+    background: -o-linear-gradient(top, #ffffff 0%, #f3f3f3 49%, #ECECEC 50%, #f3f3f3 100%);
+    background: -ms-linear-gradient(top, #ffffff 0%, #f3f3f3 49%, #ECECEC 50%, #f3f3f3 100%);
+    background: linear-gradient(to bottom, #ffffff 0%, #f3f3f3 49%, #ECECEC 50%, #f3f3f3 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#f3f3f3', GradientType=0);
+    text-align: center;
+    cursor: pointer;
+}
+
+.param div:hover, button#applybtn:hover {
+    background: #F5F5F5;
+    background: -moz-linear-gradient(top, #F5F5F5 0%, #EEEEEE 49%, #E0E0E0 50%, #E1E1E1 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, #F5F5F5), color-stop(49%, #EEEEEE), color-stop(50%, #E0E0E0), color-stop(100%, #E1E1E1));
+    background: -webkit-linear-gradient(top, #F5F5F5 0%, #EEEEEE 49%, #E0E0E0 50%, #E1E1E1 100%);
+    background: -o-linear-gradient(top, #F5F5F5 0%, #EEEEEE 49%, #E0E0E0 50%, #E1E1E1 100%);
+    background: -ms-linear-gradient(top, #F5F5F5 0%, #EEEEEE 49%, #E0E0E0 50%, #E1E1E1 100%);
+    background: linear-gradient(to bottom, #F5F5F5 0%, #EEEEEE 49%, #E0E0E0 50%, #E1E1E1 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#F5F5F5', endColorstr='#E1E1E1', GradientType=0);
+}
+
+.param div:active, button#applybtn:active {
+    background: #FFFFFF;
+    background: -moz-linear-gradient(top, #FFFFFF 0%, #F4F4F4 60%, #ECECEC 80%, #F3F3F3 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, #FFFFFF), color-stop(60%, #F4F4F4), color-stop(80%, #ECECEC), color-stop(100%, #F3F3F3));
+    background: -webkit-linear-gradient(top, #FFFFFF 0%, #F4F4F4 60%, #ECECEC 80%, #F3F3F3 100%);
+    background: -o-linear-gradient(top, #FFFFFF 0%, #F4F4F4 60%, #ECECEC 80%, #F3F3F3 100%);
+    background: -ms-linear-gradient(top, #FFFFFF 0%, #F4F4F4 60%, #ECECEC 80%, #F3F3F3 100%);
+    background: linear-gradient(to bottom, #FFFFFF 0%, #F4F4F4 60%, #ECECEC 80%, #F3F3F3 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFF', endColorstr='#F3F3F3', GradientType=0);
+}
+
+div.clicked, div.clicked:hover {
+    color: #ffffff;
+    background: #BEBEC3; /* Old browsers */
+    background: -moz-linear-gradient(top, #BEBEC3 0%, #909095 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #BEBEC3 0%, #909095 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #BEBEC3 0%, #909095 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#BEBEC3', endColorstr='#909095', GradientType=0); /* IE6-9 */
+    cursor: default;
+}
+
+.calendar {
+    float: left;
+    margin-right: 20px;
+    margin-left: 20px;
+    padding: 0;
+    position: relative;
+    top: 0;
+}
+
+input#datapicker{
+    height: 22px;
+    width: 140px;
+    border: 1px solid #979797;
+    padding: 0 5px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+}
+
+.calIcon{
+    position: absolute;
+    top: 6px;
+    right: 5px;
+    cursor: pointer;
+}
+
+button#applybtn {
+    display: block;
+    float: left;
+    width: 58px;
+    height: 22px;
+    padding: 0;
+    margin: 0;
+    font-family: "HelveticaNeueRegular", serif;
+    font-size: 75%;
+    border: 1px solid #979797;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.11), 0 0 1px 1px rgba(255, 255, 255, 1);
+    color: #000000;
+}
+
+.dashtable {
+    display: block;
+    max-height: 416px;
+    font-family: "HelveticaNeueRegular", serif;
+    font-size: 75%;
+    color: #9B9B9B;
+    border: 1px solid #CCCCCC;
+    border-radius: 3px 0 0 3px;
+    -webkit-border-radius: 3px 3px 0 0;
+    -moz-border-radius: 3px 3px 0 0;
+}
+
+.table {
+    display: block;
+    position: relative;
+    top: -1px;
+    width: 1065px;
+    height: 416px;
+    left: 93px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+.main {
+    width: 100%;
+    max-width: 1065px;
+    height: 416px;
+    max-height: 416px;
+    border-collapse: collapse;
+    float: left;
+    text-align: center;
+    z-index: 1;
+}
+
+table.main tr {
+    height: 32px;
+}
+
+table.main tr td {
+    border-right: 1px solid rgba(204, 204, 204, .3);
+    width: 67px;
+    min-width: 67px;
+}
+
+table.main tr:nth-last-of-type(1) td {
+    border-top: 1px solid #CCCCCC;
+}
+
+.dashtable .heading {
+    display: block;
+    float: left;
+    width: 92px;
+    min-width: 92px;
+    height: 416px;
+}
+
+.heading {
+    display: block;
+    position: absolute;
+    font-family: "HelveticaNeueRegular", serif;
+    color: #000000;
+    text-align: left;
+    background: #F6F6F6;
+    font-weight: normal;
+    border-right: 1px solid #CCCCCC;
+    width: 92px;
+    white-space: nowrap;
+    z-index: 30;
+}
+
+.heading > div {
+    display: block;
+    height: 32px;
+    width: 82px;
+    padding-left: 10px;
+    float: left;
+    line-height: 2.6;
+}
+
+.heading div:nth-of-type(6), .heading div:nth-of-type(8), div.graph, div.status {
+    border-top: 1px solid #CCCCCC;
+    height: 31px;
+}
+
+table.main tr th {
+    padding-left: 10px;
+    text-align: left;
+    height: 31px;
+}
+
+table.main tr:nth-of-type(2) td {
+    text-align: center;
+    background: #F5F2E9 !important;
+    border-right: 1px solid rgba(204, 204, 204, .3);
+}
+
+table.main tr:nth-of-type(2) td div {
+    background: url("../img/section.svg") 50% 0 no-repeat;
+    margin-top: -5px;
+    padding: 8px 0;
+}
+
+table.main tr:nth-of-type(1) th:nth-of-type(1), table.main tr:nth-of-type(1) th:nth-of-type(2) {
+    font-family: "HelveticaNeueMedium", serif;
+    color: #000000;
+    padding-left: 10px;
+    border-right: 1px solid rgba(204, 204, 204, .3);
+    font-weight: normal;
+}
+
+table.main tr:nth-of-type(2) td div {
+    height: 10px;
+}
+
+table.main tr:nth-of-type(6), table.main tr:nth-of-type(8), table.main tr:nth-of-type(14), table.main tr:nth-of-type(2) {
+    border-top: 1px solid #CCCCCC;
+}
+
+table.main tr:nth-of-type(2) th:nth-of-type(1) {
+    border-top: none;
+}
+
+table.main tr:nth-of-type(even) td {
+    background: #F4F9FE;
+}
+
+table.main tr:nth-last-of-type(1) td {
+    background: #ffffff;
+}
+
+img.flag {
+    position: absolute;
+    left: 1134px;
+    top: 9px;
+}
+
+.orange {
+    color: #E99C1F !important;
+    font-family: "HelveticaNeueMedium", serif;
+}
+
+.red {
+    color: #D0021B !important;
+    font-family: "HelveticaNeueMedium", serif;
+}
+
+.point {
+    color: #ffffff !important;
+    display: block;
+    box-shadow: none !important;
+    width: 85%;
+    background: inherit;
+    height: 22px;
+    font-family: "HelveticaNeueRegular", serif;
+    font-weight: normal;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    text-align: center;
+    line-height: 2em;
+    margin: 4px auto;
+    padding: 0;
+}
+
+.point.redbl {
+    background: #D0021B;
+
+}
+
+.point.blue {
+    background: #4A90E2 !important;
+
+}
+
+.borderless {
+    border-right: 1px solid transparent !important;
+}
+
+.highlighted {
+    position: relative;
+    color: #000000;
+    border-right: 1px solid transparent !important;
+    z-index: 20;
+}
+
+.highlighted:before {
+    box-shadow: -15px 0 8px -15px inset;
+    content: " ";
+    color: #CCCCCC !important;
+    height: 100%;
+    top: 0;
+    left: -15px;
+    position: absolute;
+    width: 15px;
+
+}
+
+.highlighted:after {
+    box-shadow: 15px 0 8px -15px inset;
+    content: " ";
+    height: 100%;
+    color: #CCCCCC !important;
+    position: absolute;
+    top: 0;
+    right: -15px;
+    width: 15px;
+    border-right: 1px solid transparent !important;
+}
+
+/*************** SCROLLBAR BASE CSS ***************/
+
+.scroll-wrapper {
+    overflow: hidden !important;
+    padding: 0 !important;
+    position: relative;
+}
+
+.scroll-wrapper > .scroll-content {
+    border: none !important;
+    box-sizing: content-box !important;
+    height: auto;
+    left: 0;
+    margin: 0;
+    max-height: none;
+    max-width: none !important;
+    padding: 0;
+    position: relative !important;
+    top: 0;
+    width: auto !important;
+}
+
+.scroll-wrapper > .scroll-content::-webkit-scrollbar {
+    height: 0;
+    width: 0;
+}
+
+.scroll-element {
+    display: none;
+}
+
+.scroll-element, .scroll-element div {
+    box-sizing: content-box;
+}
+
+.scroll-element.scroll-x.scroll-scrollx_visible,
+.scroll-element.scroll-y.scroll-scrolly_visible {
+    display: block;
+}
+
+.scroll-element .scroll-bar,
+.scroll-element .scroll-arrow {
+    cursor: default;
+}
+
+.scroll-textarea {
+    border: 1px solid #cccccc;
+    border-top-color: #999999;
+}
+
+.scroll-textarea > .scroll-content {
+    overflow: hidden !important;
+}
+
+.scroll-textarea > .scroll-content > textarea {
+    border: none !important;
+    box-sizing: border-box;
+    height: 100% !important;
+    margin: 0;
+    max-height: none !important;
+    max-width: none !important;
+    overflow: scroll !important;
+    outline: none;
+    padding: 2px;
+    position: relative !important;
+    top: 0;
+    width: 100% !important;
+}
+
+.scroll-textarea > .scroll-content > textarea::-webkit-scrollbar {
+    height: 0;
+    width: 0;
+}
+
+/*************** SCROLLBAR MAC OS X ***************/
+
+.scrollbar-macosx > .scroll-element,
+.scrollbar-macosx > .scroll-element div {
+    background: none;
+    border: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    z-index: 50;
+}
+
+.scrollbar-macosx > .scroll-element div {
+    display: block;
+    height: 100%;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+
+.scrollbar-macosx > .scroll-element .scroll-element_track {
+    display: none;
+}
+
+.scrollbar-macosx > .scroll-element .scroll-bar {
+    background-color: rgba(216, 216, 216, .5);
+    display: block;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+    opacity: 0;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    border-radius: 7px;
+    -webkit-transition: opacity 0.2s linear;
+    -moz-transition: opacity 0.2s linear;
+    -o-transition: opacity 0.2s linear;
+    -ms-transition: opacity 0.2s linear;
+    transition: opacity 0.2s linear;
+}
+
+.scrollbar-macosx:hover > .scroll-element .scroll-bar,
+.scrollbar-macosx > .scroll-element.scroll-draggable .scroll-bar {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+    filter: alpha(opacity=70);
+    opacity: 0.7;
+}
+
+.scrollbar-macosx > .scroll-element.scroll-x {
+    bottom: 0px;
+    height: 0px;
+    left: 0;
+    min-width: 100%;
+    overflow: visible;
+    width: 100%;
+}
+
+.scrollbar-macosx > .scroll-element.scroll-y {
+    height: 100%;
+    min-height: 100%;
+    right: 0px;
+    top: 0;
+    width: 0px;
+}
+
+/* scrollbar height/width & offset from container borders */
+.scrollbar-macosx > .scroll-element.scroll-x .scroll-bar {
+    height: 8px;
+    min-width: 10px;
+    top: -12px;
+}
+
+.scrollbar-macosx > .scroll-element.scroll-y .scroll-bar {
+    left: -9px;
+    min-height: 10px;
+    width: 7px;
+}
+
+.scrollbar-macosx > .scroll-element.scroll-x .scroll-element_outer {
+    left: 2px;
+}
+
+.scrollbar-macosx > .scroll-element.scroll-x .scroll-element_size {
+    left: -4px;
+}
+
+.scrollbar-macosx > .scroll-element.scroll-y .scroll-element_outer {
+    top: 2px;
+}
+
+.scrollbar-macosx > .scroll-element.scroll-y .scroll-element_size {
+    top: -4px;
+}
+
+/* update scrollbar offset if both scrolls are visible */
+.scrollbar-macosx > .scroll-element.scroll-x.scroll-scrolly_visible .scroll-element_size {
+    left: -11px;
+}
+
+.scrollbar-macosx > .scroll-element.scroll-y.scroll-scrollx_visible .scroll-element_size {
+    top: -11px;
+}
+
+

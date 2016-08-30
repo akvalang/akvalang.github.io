@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="js/jquery.easydropdown.min.js" type="text/javascript"></script>
+    <script src="js/datepicker.min.js"></script>
+    <script src="js/datepicker.en.js"></script>
+    <script src="js/modernizr.js"></script>
+    <link href="css/datepicker.min.css" rel="stylesheet" type="text/css">
+    <link href="css/easydropdown.css" rel="stylesheet" type="text/css">
+    <title>Campaigns</title>
+</head>
+<body>
+<header class="campHeader">
+    <nav>
+        <a href="#" class="logo"><img src="img/logo.svg" alt="UniSender"></a>
+        <ul id="mainTopNav">
+            <li class="active-main-li"><a href="#">Campaigns</a></li>
+            <li><a href="#">Subscribers</a></li>
+            <li><a href="#">Webforms</a></li>
+            <li><a href="#">Automation</a></li>
+            <li class="userLink" id="dropDownSub" onclick="dropDown(this)"><a href="#" class="userProfile">user.name</a><img src="img/sophie.svg">
+
+                <ul class="submenu profile-links">
+                    <li><a href="#"><img src="img/profile-icon.svg">Profile</a></li>
+                    <li><a href="#"><img src="img/setup-icon.svg">Account Setup</a></li>
+                    <li><a href="#"><img src="img/report-icon.svg">Report Documents</a></li>
+                    <li><a href="#"><img src="img/price-icon.svg">Price Planes</a></li>
+                    <li><a href="#"><img src="img/control-icon.svg">Account control</a></li>
+                    <li><a href="#"><img src="img/loguot-icon.svg">Log out</a></li>
+                </ul>
+                <ul class="submenu stat">
+                    <li>
+                        <div>
+                            <span class="using">Using<img id="refresh" onclick="onRefreshClick(this)" id="refresh" src="img/refresh.svg" alt="refresh"></span>
+                            <span class="sum name">Sent Emails</span>
+                            <div class="progress">
+                                <progress id="elem" class="menuBar"></progress>
+                            </div>
+                            <span class="sum">3 123 750 of 10 137 500 - 30%</span>
+                            <span class="sum name">Adresses used</span>
+                            <div class="progress">
+                                <progress id="elem1" class="menuBar"></progress>
+                            </div>
+                            <span class="sum">100 000 of 750 000 - 16%</span>
+                        </div>
+                    </li>
+                    <li class="stat">
+                        <div>
+                            <span class="amount name">Balance</span>
+                            <span class="amount">$ 734,034.12</span>
+                            <button type="submit" id="refill"><label for="refill">Refill</label></button>
+                            <span class="sum name plan">&lt;&lt;<a href="#" class="plan">Pro 500</a>&gt;&gt; is current pricing plan</span>
+                            <span class="date">10 FEB, 15 at 10:41</span>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+    </nav>
+    <nav class="subNav">
+        <ul>
+            <li class="activeSM"><a href="#">Segments & Subscribers</a></li>
+            <li><a href="#">Analytic</a></li>
+            <li><a href="#">History</a></li>
+            <li><a href="#">Files</a></li>
+        </ul>
+    </nav>
+    <div class="top-divider"></div>
+</header>
+<main class="main">
+    <div class="mainBlock">
+        <h1>Campaings</h1>
+        <nav class="campMenu">
+            <ul>
+                <li class="active-camp"><a href="#">Sent</a></li>
+                <li><a href="#">Sending</a></li>
+                <li><a href="#">Sheduled</a></li>
+                <li><a href="#">Paused</a></li>
+                <li><a href="#">Drafts</a></li>
+                <li><a href="#">Archive</a></li>
+                <li><a href="#">Deleted</a></li>
+            </ul>
+            <div class="templatesDD">
+                <ul class="dd-template">
+                    <li class="dd-templ-first" id="dd-templ"><a href="#" class="dd-templ-first"> Create new Campaign</a>
+                        <ul class="dd-templ-second">
+                            <li><a href="#">
+                                <img src="img/import.svg">
+                                <span class="templ-tit">Import from a CSV or TXT file</span>
+                                <span class="templ-desc">It is a long established fact that a readerwill be distracted</span>
+                            </a>
+                            </li>
+                            <li><a href="#">
+                                <img src="img/xls.svg">
+                                <span class="templ-tit">Copy/Paste from Excel</span>
+                                <span class="templ-desc">Readable content of a page when lookingat its layout packages and web</span>
+                            </a>
+                            </li>
+                            <li><a href="#">
+                                <img src="img/subscrbrs.svg">
+                                <span class="templ-tit">Add a single subscriber</span>
+                                <span class="templ-desc">Readable content of a page when lookingat its layout packages and web</span>
+                            </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="mid-divider"></div>
+        <div class="parameters">
+            <select class="dropdown">
+                <option class="label">Regular campaign</option>
+                <option>Regular campaign</option>
+                <option>Regular campaign</option>
+            </select>
+            <select class="dropdown">
+                <option class="label">All clients</option>
+                <option>Client 1</option>
+                <option>Client 2</option>
+                <option>Client 3</option>
+                <option>Client 4</option>
+                <option>Client 5</option>
+                <option>Client 6</option>
+                <option>Client 7</option>
+                <option>Client 8</option>
+            </select>
+            <div class="calendar">
+                <img class="calendarIcon" src="img/calendr-icon.svg">
+                <input id="datapicker"
+                       type="text"
+                       data-range="true"
+                       data-multiple-dates-separator=" - "
+                       data-language="en"
+                       class="datepicker-here"
+                />
+            </div>
+            <button id="archive" type="submit" class="sort-btn"><img src="img/archive-icon.svg">Archive</button>
+            <button id="delete" type="reset" class="sort-btn"><img src="img/delete-icon.svg">Delete</button>
+
+            <div class="view">
+                <a href="#" class="selected-view"><img src="img/line-view-icon.svg"></a>
+                <a href="#"><img src="img/block-view-icon.svg"></a>
+            </div>
+            <form class="search">
+                <input type="text" placeholder="Test campaing" required>
+                <button type="submit" class="search-btn"><img src="img/search-icon.svg"/></button>
+            </form>
+        </div>
+        <div class="gridBlock">
+            <div class="blockView">
+                <img src="img/templ7.svg" class="mainPic" alt="picture">
+                <div class="descBlk">
+                    <span class="similar tit">Test campaign -1</span>
+                    <div class="blk-description">Cicero are also reproduced in their
+                        exact original form, about send llololo</div>
+                    <img src="img/client-icon.svg" class="blk-icon">
+                    <span class="similar">All CLients</span>
+                    <div class="blk-divider"></div>
+                    <div class="blk-stat">
+                        <span class="similar">Delivered</span>
+                        <span class="sumLine">9 234 543</span>
+                    </div>
+                    <div class="blk-stat">
+                        <span class="similar">Opened</span>
+                        <span class="sumLine">7 234 543</span>
+                    </div>
+                    <div class="blk-stat">
+                        <span class="similar">Clicked</span>
+                        <span class="sumLine">1 234 543</span>
+                    </div>
+                    <div class="blk-divider"></div>
+                    <img src="img/blk-calendr-icon.svg" class="blk-icon">
+                    <span class="similar">16 Jan, 15 at 12:34:51</span>
+                    <input id="grid1" type="checkbox" class="checkLine">
+                    <label for="grid1"></label>
+                </div>
+            </div>
+            <div class="blockView">
+                <img src="img/templ8.svg" class="mainPic" alt="picture">
+                <div class="descBlk">
+                    <span class="similar tit">Test campaign -1</span>
+                    <div class="blk-description">Cicero are also reproduced in their
+                        exact original form, about send llololo</div>
+                    <img src="img/client-icon.svg" class="blk-icon">
+                    <span class="similar">All CLients</span>
+                    <div class="blk-divider"></div>
+                    <div class="blk-stat">
+                        <span class="similar">Delivered</span>
+                        <span class="sumLine">10</span>
+                    </div>
+                    <div class="blk-stat">
+                        <span class="similar">Opened</span>
+                        <span class="sumLine">5</span>
+                    </div>
+                    <div class="blk-stat">
+                        <span class="similar">Clicked</span>
+                        <span class="sumLine">0</span>
+                    </div>
+                    <div class="blk-divider"></div>
+                    <img src="img/blk-calendr-icon.svg" class="blk-icon">
+                    <span class="similar">16 Jan, 15 at 12:34:51</span>
+                    <input id="grid2" type="checkbox" class="checkLine">
+                    <label for="grid2"></label>
+                </div>
+            </div>
+            <div class="blockView">
+                <img src="img/templ9.svg" class="mainPic" alt="picture">
+                <div class="descBlk">
+                    <span class="similar tit">Test campaign -1</span>
+                    <div class="blk-description">Cicero are also reproduced in their
+                        exact original form, about send llololo</div>
+                    <img src="img/client-icon.svg" class="blk-icon">
+                    <span class="similar">All CLients</span>
+                    <div class="blk-divider"></div>
+                    <div class="blk-stat">
+                        <span class="similar">Delivered</span>
+                        <span class="sumLine">1 257</span>
+                    </div>
+                    <div class="blk-stat">
+                        <span class="similar">Opened</span>
+                        <span class="sumLine">786</span>
+                    </div>
+                    <div class="blk-stat">
+                        <span class="similar">Clicked</span>
+                        <span class="sumLine">345</span>
+                    </div>
+                    <div class="blk-divider"></div>
+                    <img src="img/blk-calendr-icon.svg" class="blk-icon">
+                    <span class="similar">16 Jan, 15 at 12:34:51</span>
+                    <input id="grid3" type="checkbox" class="checkLine">
+                    <label for="grid3"></label>
+                </div>
+            </div>
+            <div class="blockView">
+                <img src="img/templ10.svg" class="mainPic" alt="picture">
+                <div class="descBlk">
+                    <span class="similar tit">Test campaign -1</span>
+                    <div class="blk-description">Cicero are also reproduced in their
+                        exact original form, about send llololo</div>
+                    <img src="img/client-icon.svg" class="blk-icon">
+                    <span class="similar">All CLients</span>
+                    <div class="blk-divider"></div>
+                    <div class="blk-stat">
+                        <span class="similar">Delivered</span>
+                        <span class="sumLine">12 493</span>
+                    </div>
+                    <div class="blk-stat">
+                        <span class="similar">Opened</span>
+                        <span class="sumLine">11 367</span>
+                    </div>
+                    <div class="blk-stat">
+                        <span class="similar">Clicked</span>
+                        <span class="sumLine">5 679</span>
+                    </div>
+                    <div class="blk-divider"></div>
+                    <img src="img/blk-calendr-icon.svg" class="blk-icon">
+                    <span class="similar">16 Jan, 15 at 12:34:51</span>
+                    <input id="grid4" type="checkbox" class="checkLine">
+                    <label for="grid4"></label>
+                </div>
+            </div>
+            <div class="blockView">
+                <img src="img/templ7.svg" class="mainPic" alt="picture">
+                <div class="descBlk">
+                    <span class="similar tit">Test campaign -1</span>
+                    <div class="blk-description">Cicero are also reproduced in their
+                        exact original form, about send llololo</div>
+                    <img src="img/client-icon.svg" class="blk-icon">
+                    <span class="similar">All CLients</span>
+                    <div class="blk-divider"></div>
+                    <div class="blk-stat">
+                        <span class="similar">Delivered</span>
+                        <span class="sumLine">1 234 543</span>
+                    </div>
+                    <div class="blk-stat">
+                        <span class="similar">Opened</span>
+                        <span class="sumLine">934 543</span>
+                    </div>
+                    <div class="blk-stat">
+                        <span class="similar">Clicked</span>
+                        <span class="sumLine">543 543</span>
+                    </div>
+                    <div class="blk-divider"></div>
+                    <img src="img/blk-calendr-icon.svg" class="blk-icon">
+                    <span class="similar">16 Jan, 15 at 12:34:51</span>
+                    <input id="grid5" type="checkbox" class="checkLine">
+                    <label for="grid5"></label>
+                </div>
+            </div>
+            <div class="blockView">
+                <img src="img/templ8.svg" class="mainPic" alt="picture">
+                <div class="descBlk">
+                    <span class="similar tit">Test campaign -1</span>
+                    <div class="blk-description">Cicero are also reproduced in their
+                        exact original form, about send llololo</div>
+                    <img src="img/client-icon.svg" class="blk-icon">
+                    <span class="similar">All CLients</span>
+                    <div class="blk-divider"></div>
+                    <div class="blk-stat">
+                        <span class="similar">Delivered</span>
+                        <span class="sumLine">10</span>
+                    </div>
+                    <div class="blk-stat">
+                        <span class="similar">Opened</span>
+                        <span class="sumLine">5</span>
+                    </div>
+                    <div class="blk-stat">
+                        <span class="similar">Clicked</span>
+                        <span class="sumLine">0</span>
+                    </div>
+                    <div class="blk-divider"></div>
+                    <img src="img/blk-calendr-icon.svg" class="blk-icon">
+                    <span class="similar">16 Jan, 15 at 12:34:51</span>
+                    <input id="grid6" type="checkbox" class="checkLine">
+                    <label for="grid6"></label>
+                </div>
+            </div>
+            <div class="blockView">
+                <img src="img/templ9.svg" class="mainPic" alt="picture">
+                <div class="descBlk">
+                    <span class="similar tit">Test campaign -1</span>
+                    <div class="blk-description">Cicero are also reproduced in their
+                        exact original form, about send llololo</div>
+                    <img src="img/client-icon.svg" class="blk-icon">
+                    <span class="similar">All CLients</span>
+                    <div class="blk-divider"></div>
+                    <div class="blk-stat">
+                        <span class="similar">Delivered</span>
+                        <span class="sumLine">1 257</span>
+                    </div>
+                    <div class="blk-stat">
+                        <span class="similar">Opened</span>
+                        <span class="sumLine">786</span>
+                    </div>
+                    <div class="blk-stat">
+                        <span class="similar">Clicked</span>
+                        <span class="sumLine">345</span>
+                    </div>
+                    <div class="blk-divider"></div>
+                    <img src="img/blk-calendr-icon.svg" class="blk-icon">
+                    <span class="similar">16 Jan, 15 at 12:34:51</span>
+                    <input id="grid7" type="checkbox" class="checkLine">
+                    <label for="grid7"></label>
+                </div>
+            </div>
+            <div class="blockView">
+                <img src="img/templ10.svg" class="mainPic" alt="picture">
+                <div class="descBlk">
+                    <span class="similar tit">Test campaign -1</span>
+                    <div class="blk-description">Cicero are also reproduced in their
+                        exact original form, about send llololo</div>
+                    <img src="img/client-icon.svg" class="blk-icon">
+                    <span class="similar">All CLients</span>
+                    <div class="blk-divider"></div>
+                    <div class="blk-stat">
+                        <span class="similar">Delivered</span>
+                        <span class="sumLine">12 493</span>
+                    </div>
+                    <div class="blk-stat">
+                        <span class="similar">Opened</span>
+                        <span class="sumLine">11 367</span>
+                    </div>
+                    <div class="blk-stat">
+                        <span class="similar">Clicked</span>
+                        <span class="sumLine">5 679</span>
+                    </div>
+                    <div class="blk-divider"></div>
+                    <img src="img/blk-calendr-icon.svg" class="blk-icon">
+                    <span class="similar">16 Jan, 15 at 12:34:51</span>
+                    <input id="grid8" type="checkbox" class="checkLine">
+                    <label for="grid8"></label>
+                </div>
+            </div>
+            <div class="blockView">
+                <img src="img/templ9.svg" class="mainPic" alt="picture">
+                <div class="descBlk">
+                    <span class="similar tit">Test campaign -1</span>
+                    <div class="blk-description">Cicero are also reproduced in their
+                        exact original form, about send llololo</div>
+                    <img src="img/client-icon.svg" class="blk-icon">
+                    <span class="similar">All CLients</span>
+                    <div class="blk-divider"></div>
+                    <div class="blk-stat">
+                        <span class="similar">Delivered</span>
+                        <span class="sumLine">1 257</span>
+                    </div>
+                    <div class="blk-stat">
+                        <span class="similar">Opened</span>
+                        <span class="sumLine">786</span>
+                    </div>
+                    <div class="blk-stat">
+                        <span class="similar">Clicked</span>
+                        <span class="sumLine">345</span>
+                    </div>
+                    <div class="blk-divider"></div>
+                    <img src="img/blk-calendr-icon.svg" class="blk-icon">
+                    <span class="similar">16 Jan, 15 at 12:34:51</span>
+                    <input id="grid9" type="checkbox" class="checkLine">
+                    <label for="grid9"></label>
+                </div>
+            </div>
+            <div class="blockView">
+                <img src="img/templ10.svg" class="mainPic" alt="picture">
+                <div class="descBlk">
+                    <span class="similar tit">Test campaign -1</span>
+                    <div class="blk-description">Cicero are also reproduced in their
+                        exact original form, about send llololo</div>
+                    <img src="img/client-icon.svg" class="blk-icon">
+                    <span class="similar">All CLients</span>
+                    <div class="blk-divider"></div>
+                    <div class="blk-stat">
+                        <span class="similar">Delivered</span>
+                        <span class="sumLine">12 493</span>
+                    </div>
+                    <div class="blk-stat">
+                        <span class="similar">Opened</span>
+                        <span class="sumLine">11 367</span>
+                    </div>
+                    <div class="blk-stat">
+                        <span class="similar">Clicked</span>
+                        <span class="sumLine">5 679</span>
+                    </div>
+                    <div class="blk-divider"></div>
+                    <img src="img/blk-calendr-icon.svg" class="blk-icon">
+                    <span class="similar">16 Jan, 15 at 12:34:51</span>
+                    <input id="grid10" type="checkbox" class="checkLine">
+                    <label for="grid10"></label>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="preview">
+        <div>
+            <div class="leftBlck">
+                <span>View</span>
+                <select class="dropdown">
+                    <option selected>10</option>
+                    <option>20</option>
+                    <option>50</option>
+                </select>
+            </div>
+            <div class="rightBlck">
+                <span>1-40 <i style="font-family: 'PT Sans',serif">of</i> 40</span>
+                <nav role="navigation">
+                    <ul class="cd-pagination custom-buttons">
+                        <li class="button"><a href="#">Prev</a></li>
+                        <li class="button"><a href="#">Next</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <div class="campFooter">
+        <div>
+            <div class="leftBlck">
+                <span class="copy">&copy; UniSender, 2008-2016</span>
+                <a href="#">Terms of Use</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Anti-Spam Policy</a>
+            </div>
+            <div class="rightBlck">
+                <select class="dropdown">
+                    <option value="eng">English</option>
+                    <option value="ukr">Ukranian</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    </div>
+</main>
+</body>
+<script src="js/script.js" type="text/javascript"></script>
+</html>

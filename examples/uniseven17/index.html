@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="style.css" rel="stylesheet">
+    <script src="script.js" type="javascript"></script>
+    <script>
+        function changeColor(change) {
+            var x = document.getElementById("users").getElementsByTagName("tr");
+            if (x[change].style.backgroundColor == "rgb(243, 243, 243)") {
+                x[change].style.backgroundColor = ""
+            } else {
+                x[change].style.backgroundColor = "rgb(243, 243, 243)"
+            }
+        }
+    </script>
+    <title>uniseven17</title>
+</head>
+<body>
+<header>
+    <div class="head">
+        <ul class="mainNav">
+            <li><a href="#" class="selected">Campaigns</a></li>
+            <li><a href="#">Subscribers</a></li>
+            <li><a href="#">Webforms</a></li>
+            <li><a href="#">Automation</a></li>
+        </ul>
+        <div class="user">
+            <img src="img/icon.svg">
+            <img src="img/arrow.svg">
+        </div>
+    </div>
+</header>
+<main>
+    <div class="camps">
+        <span class="text">Campaigns</span>
+    </div>
+    <div class="newCamp">
+        <div class="top">
+            <h1>New campaign</h1>
+            <ul class="subNuv">
+                <li><a href="#" class="active">Regular Campaign</a></li>
+                <li><a href="#">A/B Split Campaign</a></li>
+                <li><a href="#">Auto Resend</a></li>
+            </ul>
+            <div class="buttons">
+                <button type="submit" class="shedule" id="shedule" value="shedule">Shedule</button>
+                <button type="submit" class="send" id="send" value="send">Send</button>
+            </div>
+        </div>
+        <div class="bottomTop">
+            <div class="emailSubj">
+                <span class="title">Email Subject</span>
+                <input type="text" placeholder="Lorem Ipsum {{username}} established fact that" class="iptText">
+                <a class="smile" href="#"><img src="img/smile.svg"></a>
+                <select id="personalisation">
+                    <option>
+                        Add personalisation
+                    </option>
+                    <option>
+                        Add personalisation
+                    </option>
+                    <option>
+                        Add personalisation
+                    </option>
+                    <option>
+                        Add personalisation
+                    </option>
+                    <option>
+                        Add personalisation
+                    </option>
+                </select>
+                <span class="text">This text be displayed in the 'Subject' field in your recipient's email client.
+                Contrary to popular belief6 Lorem Ipsum is not simply random text. It has roots in a piece.</span>
+            </div>
+            <span class="title">Recepients</span>
+            <div class="recepients">
+                <table id="users">
+                    <tr>
+                        <td>segments</td>
+                        <td>opened, %</td>
+                        <td>clicked, %</td>
+                        <td>email sent</td>
+                        <td>last email sent</td>
+                        <td>contacts</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" id="check0" name="checkstr">
+                            <label for="check0"><span onclick="changeColor(1)"></span>All Cllients</label>
+                        </td>
+                        <td>50</td>
+                        <td>75</td>
+                        <td>11 344</td>
+                        <td>Oct 11, 2015 at 09:35</td>
+                        <td>911 111</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" id="check1" name="checkstr">
+                            <label for="check1"><span onclick="changeColor(2)"></span>Cicero are also reproduced</label>
+                        </td>
+                        <td>33</td>
+                        <td>3</td>
+                        <td>12</td>
+                        <td>Oct 8, 2015 at 12:25</td>
+                        <td>12</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" id="check2" name="checkstr">
+                            <label for="check2"><span onclick="changeColor(3)"></span>Long title with many variations
+                                and passages</label>
+                        </td>
+                        <td>88</td>
+                        <td>18</td>
+                        <td>234 456</td>
+                        <td>Oct 3, 2015 at 02:15</td>
+                        <td>12 435</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" id="check3" name="checkstr">
+                            <label for="check3"><span onclick="changeColor(4)"></span>Short segment title</label>
+                        </td>
+                        <td>50</td>
+                        <td>75</td>
+                        <td>11 344</td>
+                        <td>Oct 11, 2015 at 09:35</td>
+                        <td>911 111</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" id="check4" name="checkstr">
+                            <label for="check4"><span onclick="changeColor(5)"></span>Cicero are also reproduced</label>
+                        </td>
+                        <td>33</td>
+                        <td>3</td>
+                        <td>12</td>
+                        <td>Oct 8, 2015 at 12:25</td>
+                        <td>12</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" id="check5" name="checkstr">
+                            <label for="check5"><span onclick="changeColor(6)"></span>Long title with many variations
+                                and passages</label>
+                        </td>
+                        <td>88</td>
+                        <td>18</td>
+                        <td>234 456</td>
+                        <td>Oct 3, 2015 at 02:15</td>
+                        <td>12 435</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" id="check6" name="checkstr">
+                            <label for="check6"><span onclick="changeColor(7)"></span>Short segment title</label>
+                        </td>
+                        <td>50</td>
+                        <td>75</td>
+                        <td>11 344</td>
+                        <td>Oct 11, 2015 at 09:35</td>
+                        <td>911 111</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" id="check7" name="checkstr">
+                            <label for="check7"><span onclick="changeColor(8)"></span>Cicero are also reproduced</label>
+                        </td>
+                        <td>33</td>
+                        <td>3</td>
+                        <td>12</td>
+                        <td>Oct 8, 2015 at 12:25</td>
+                        <td>12</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" id="check8" name="checkstr">
+                            <label for="check8"><span onclick="changeColor(9)"></span>Long title with many variations
+                                and passages</label>
+                        </td>
+                        <td>88</td>
+                        <td>18</td>
+                        <td>234 456</td>
+                        <td>Oct 3, 2015 at 02:15</td>
+                        <td>12435</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" id="check9" name="checkstr">
+                            <label for="check9"><span onclick="changeColor(10)"></span>Long title with many variations
+                                and passages</label>
+                        </td>
+                        <td>88</td>
+                        <td>18</td>
+                        <td>234 456</td>
+                        <td>Oct 3, 2015 at 02:15</td>
+                        <td>12 435</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="buttons-table">
+                <button type="submit" class="create" id="create" value="create">Create new Segments</button>
+                <button type="submit" class="import" id="import" value="import">Import New Subscribers</button>
+            </div>
+        </div>
+        <div class="middle">
+            <div class="topMiddl">
+                <span class="title">Select a template</span>
+                <span class="text">There are many variations of passages of Lorem Ipsum available,
+                    but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look.
+                    Various versions have evolved over the years, sometimes by accident,
+                    sometimes on purpose (injected humour and the like).</span>
+                <ul class="subNuv">
+                    <li><a href="#" class="active">Basic</a></li>
+                    <li><a href="#">Themes</a></li>
+                    <li><a href="#">Saved Templates</a></li>
+                    <li><a href="#">Campaigns</a></li>
+                    <li><a href="#">Code Your Own</a></li>
+                </ul>
+            </div>
+            <div class="templates">
+                <div class="template">
+                    <h3>Simple Text</h3>
+                    <span class="dd">Drag and drop</span>
+                    <img src="img/templ.svg">
+                </div>
+                <div class="template">
+                    <h3>Simple Text</h3>
+                    <span class="dd">Drag and drop</span>
+                    <img src="img/templ.svg">
+                </div>
+                <div class="template">
+                    <h3>Simple Text</h3>
+                    <span class="dd">Drag and drop</span>
+                    <img src="img/templ.svg">
+                </div>
+                <div class="template">
+                    <h3>Simple Text</h3>
+                    <span class="dd">Drag and drop</span>
+                    <img src="img/templ.svg">
+                </div>
+                <div class="template">
+                    <h3>Simple Text</h3>
+                    <span class="dd">Drag and drop</span>
+                    <img src="img/templ.svg">
+                </div>
+                <div class="template">
+                    <h3>Simple Text</h3>
+                    <span class="dd">Drag and drop</span>
+                    <img src="img/templ.svg">
+                </div>
+                <div class="template">
+                    <h3>Simple Text</h3>
+                    <span class="dd">Drag and drop</span>
+                    <img src="img/templ.svg">
+                </div>
+                <div class="template">
+                    <h3>Simple Text</h3>
+                    <span class="dd">Drag and drop</span>
+                    <img src="img/templ.svg">
+                </div>
+                <div class="template">
+                    <h3>Simple Text</h3>
+                    <span class="dd">Drag and drop</span>
+                    <img src="img/templ.svg">
+                </div>
+                <div class="template">
+                    <h3>Simple Text</h3>
+                    <span class="dd">Drag and drop</span>
+                    <img src="img/templ.svg">
+                </div>
+                <div class="template">
+                    <h3>Simple Text</h3>
+                    <span class="dd">Drag and drop</span>
+                    <img src="img/templ.svg">
+                </div>
+                <div class="template">
+                    <h3>Simple Text</h3>
+                    <span class="dd">Drag and drop</span>
+                    <img src="img/templ.svg">
+                </div>
+            </div>
+        </div>
+        <div class="bottom">
+            <div class="selects">
+                <span class="title">From</span>
+                <select id="from" class="location">
+                    <option>Maksym Kichuk &lt;m.kichuk@unisender.com&gt; </option>
+                    <option>Anton Karlov &lt;a.karlov@unisender.com&gt; </option>
+                </select>
+                <span class="text">This will be displayed in the 'From' field of your recipient's email client.
+                    Using your own email.</span>
+            </div>
+            <div class="selects">
+                <span class="title">Language</span>
+                <select id="language" class="location">
+                    <option>English</option>
+                    <option>Ukranian</option>
+                </select>
+                <span class="text">The language you choose will be used in your unsubscribe page. Latin words, combined with.</span>
+            </div>
+            <div class="selects">
+                <span class="title">Link tracking</span>
+                <select id="tracking" class="location">
+                    <option>Google Analytics</option>
+                    <option>Yandex Metric</option>
+                </select>
+                <span class="text">Track clicks from your campaigns all the way to purchases on your website Requires.</span>
+            </div>
+        </div>
+    </div>
+    <div class="empty">0</div>
+</main>
+
+</body>
+</html>

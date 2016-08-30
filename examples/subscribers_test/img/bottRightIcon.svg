@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="62px" height="26px" viewBox="0 0 62 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.4.3 (16618) - http://www.bohemiancoding.com/sketch -->
+    <title>Untitled</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#ECECEC" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="next-btn" sketch:type="MSLayerGroup" transform="translate(1.000000, 1.000000)">
+            <path d="M3.26698586e-17,3.99005301 C3.62677085e-17,1.78640758 1.79568082,0 4.0065556,0 L55.9934444,0 C58.206204,0 60,1.78429328 60,3.99005301 L60,20.009947 C60,22.2135924 58.2043192,24 55.9934444,24 L4.0065556,24 C1.79379604,24 2.91318159e-18,22.2157067 6.51448342e-18,20.009947 L3.26698586e-17,3.99005301 Z" id="btn-bg" stroke="#C5C5C5" fill="url(#linearGradient-1)" sketch:type="MSShapeGroup"></path>
+            <path d="M30.5,1.5 L30.5,22.5237961" id="Line" stroke="#C5C5C5" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+            <path d="M12.8263625,12.7293012 L12.8263625,12.7293012 L17.0974587,17 L17.9236226,16.1732401 L13.6529238,11.9023426 L17.7289038,7.82656123 L16.9025413,7 L12,11.9023426 L12.8263625,12.7293012 Z" id="Shape-Copy-16" fill="#C5C5C5" sketch:type="MSShapeGroup"></path>
+            <path d="M43.8263625,12.7293012 L43.8263625,12.7293012 L48.0974587,17 L48.9236226,16.1732401 L44.6529238,11.9023426 L48.7289038,7.82656123 L47.9025413,7 L43,11.9023426 L43.8263625,12.7293012 Z" id="Shape-Copy-17" fill="#C5C5C5" sketch:type="MSShapeGroup" transform="translate(45.961811, 12.000000) rotate(-180.000000) translate(-45.961811, -12.000000) "></path>
+        </g>
+    </g>
+</svg>

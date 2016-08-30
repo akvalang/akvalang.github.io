@@ -1,0 +1,221 @@
+html{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "PTSansRegular", serif;
+}
+
+@font-face {
+    font-family: "PTSansRegular";
+    src: url("fonts/PTSans/PTSansRegular/PTSansRegular.eot");
+    src: url("fonts/PTSans/PTSansRegular/PTSansRegular.eot?#iefix")format("embedded-opentype"),
+    url("fonts/PTSans/PTSansRegular/PTSansRegular.woff") format("woff"),
+    url("fonts/PTSans/PTSansRegular/PTSansRegular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+.block{
+    display: block;
+    width: 450px;
+    max-width: 873px;
+    min-width: 450px;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -200px;
+    margin-left: -437px;
+    padding: 40px;
+}
+
+.popup{
+    display: block;
+    width: 600px;
+    max-width: 873px;
+    min-width: 450px;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -200px;
+    margin-left: -300px;
+    padding: 40px;
+}
+
+.top{
+    display: block;
+    float: left;
+    width: 100%;
+    margin-bottom: 60px;
+}
+
+.whois{
+    display: block;
+    float: left;
+    width: 470px;
+    margin: 30px 0;
+}
+
+h2{
+    float: left;
+    font-size: 20px;
+    color: #424950;
+    padding: 0 24px 0 0;
+    margin: 0;
+}
+
+.separator{
+    float: left;
+    display: block;
+    width: 1px;
+    height: 20px;
+    border-left: 1px dashed #b7b7b7;
+    margin-top: 5px;
+}
+
+a.card{
+    float: left;
+    font-size: 16px;
+    color: #4A90E2;
+    margin-left: 24px;
+    margin-top: 3px;
+    text-decoration: none;
+    border-bottom: 1px dashed #4A90E2;
+}
+
+.links, .mails{
+    display: block;
+    float: left;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.link, .mail{
+    display: block;
+    height: 58px;
+    max-height: 58px;
+    border-top: 1px dashed #b7b7b7;
+}
+
+.link:nth-last-child(1), .mail:nth-last-child(1){
+    border-bottom: 1px dashed #b7b7b7;
+}
+
+.blLk{
+    display: block;
+    float: left;
+    width: 389px;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+.link .title, .popup .title{
+    float: left;
+    color: #424950;
+    font-size: 16px;
+    padding: 6px 0 3px 0;
+}
+
+.link a, .mail a{
+    float: left;
+    font-size: 14px;
+    text-decoration: none;
+    color: #4A90E2;
+    padding: 3px 0 6px 0;
+}
+.popup a{
+    float: left;
+    font-size: 16px;
+    text-decoration: none;
+    color: #4A90E2;
+    padding: 3px 0 6px 0;
+}
+
+.reit{
+    float: left;
+    display: block;
+    width: 22px;
+    height: 32px;
+    background: #55b71d;
+    margin: 13px 0;
+}
+
+.reit span{
+    float: left;
+    padding: 6px;
+    font-size: 16px;
+    color: #ffffff;
+}
+
+.link:nth-last-child(1) .title{
+    padding: 18px 0;
+}
+
+.bottom, .underTop{
+    display: block;
+    float: left;
+}
+
+.underTop{
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.bottom img, .underTop img{
+    float: left;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+a.download{
+    float: left;
+    text-decoration: none;
+    font-size: 16px;
+    color: #4A90E2;
+}
+
+input.check{
+    float: left;
+    margin: 22px;
+}
+
+.mail{
+    background: #fff8e5;
+}
+
+.leftSide{
+    display: block;
+    float: left;
+    width: 190px;
+}
+
+.rightSide{
+    display: block;
+    float: left;
+    margin-left: 100px;
+    padding: 18px 0;
+    width: 200px;
+}
+
+.stat{
+    font-size: 14px;
+    color: #b7b7b7;
+    padding: 3px 0 6px 0;
+}
+
+a.email{
+    padding: 10px 0 0 0;
+}
+
+.date{
+    font-size: 14px;
+    color: #b7b7b7;
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <script src="jquery.1.10.2.min.js"></script>
+    <title>Header</title>
+</head>
+<body>
+<div class="headerContainer">
+    <div class="header">
+    <a href="#" class="logo"><img src="img/logo.svg" alt="UniSender"></a>
+    <nav>
+        <ul id="mainTopNav">
+            <li><a href="#">Contacts</a></li>
+            <li class="current"><a href="#">Campaings</a></li>
+            <li><a href="#">Webforms</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Integration</a></li>
+            <li><a href="#">Help</a></li>
+            <li id="dropDownSub" onclick="dropDown(this)"><a href="#" class="userProfile">user.name</a>
+
+                <ul class="submenu profile-links">
+                    <li><a href="#"><img src="img/profile-icon.svg">Profile</a></li>
+                    <li><a href="#"><img src="img/setup-icon.svg">Account Setup</a></li>
+                    <li><a href="#"><img src="img/report-icon.svg">Report Documents</a></li>
+                    <li><a href="#"><img src="img/price-icon.svg">Price Planes</a></li>
+                    <li><a href="#"><img src="img/control-icon.svg">Account control</a></li>
+                    <li><a href="#"><img src="img/loguot-icon.svg">Log out</a></li>
+                    </ul>
+                <ul class="submenu stat">
+                    <li>
+                        <div>
+                            <span class="using">Using<img id="refresh" onclick="onRefreshClick(this)" src="img/refresh.svg" alt="refresh"></span>
+                            <span class="sum name">Sent Emails</span>
+                            <div class="progress">
+                                <progress id="elem"></progress>
+                            </div>
+                            <span class="sum">3 123 750 of 10 137 500 - 30%</span>
+                            <span class="sum name">Adresses used</span>
+                            <div class="progress">
+                                <progress id="elem1"></progress>
+                            </div>
+                            <span class="sum">100 000 of 750 000 - 16%</span>
+                        </div>
+                    </li>
+                    <li class="stat">
+                        <div>
+                            <span class="amount name">Balance</span>
+                            <span class="amount">$ 734,034.12</span>
+                            <button type="submit" id="refill"><label for="refill">Refill</label></button>
+                            <span class="sum name">&lt;&lt;<a href="#" class="plan">Pro 500</a>&gt;&gt; is current pricing plan</span>
+                            <span class="date">10 FEB, 15 at 10:41</span>
+                        </div>
+                    </li>
+                </ul>
+                </ul>
+            </li>
+    </nav>
+        <nav id="subTopNav">
+            <a class="selected" href="#">Emails</a>
+            <a href="#">Delivery reports</a>
+            <a href="#">Sheduled campaigns</a>
+            <a href="#">Trigger-based emails</a>
+            <a href="#">RSS-Streams</a>
+            <a href="#">My Template</a>
+            <a href="#">Categories</a>
+            <a href="#">Quick SMS dispatch</a>
+        </nav>
+        <div class="top-divider"></div>
+        </div>
+</div>
+<footer>
+
+    <div class="footer">
+        <div class="bottom-divider"></div>
+        <div class="position-right">
+        <a href="#">Правила использования</a>
+        <a href="#">Политика конфиденциальности</a>
+        <a href="#">Анти-спам политика</a>
+            <select id="selectbox">
+                <option value="russian">Russian</option>
+                <option value="english">English</option>
+                <option value="italian">Italian</option>
+            </select>
+        <a href="#">&copy; UniSender</a>
+        </div>
+        </div>
+    </footer>
+</body>
+<script type="text/javascript" src="script.js"></script>
+</html>
