@@ -10,9 +10,6 @@
     <body>
 
     <div class="block">
-    <?php
-    $cookie_name = 'user';
-    if(isset($_COOKIE[$cookie_name]) && $_COOKIE[$cookie_name] == 'sodium238') {;?>
         <div class="list-page">
         <h2>Authorized!</h2>
         <ul>
@@ -44,7 +41,6 @@
         </ul>
         <a id="logout" style="cursor: pointer;float: right" onclick="logout()">Logout</a>
         </div>
-   <?php } else {?>
 
     <div id="tooltip" style="display: none;">
         <div class="arrow"></div>
@@ -60,7 +56,6 @@
            onkeyup="gradientOn('button'); keyCheck(event)">
     <button type="submit" id="button" class="button" value="Login"  onclick="validate('tooltip', 'pass')">Login</button>
 </div>
-    <?php }?>
 
     </body>
     </html>
